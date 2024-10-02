@@ -1,0 +1,263 @@
+:root {
+  --text-main-dark: rgb(48, 48, 48);
+  --text-secondary-dark: rgb(85, 85, 85);
+
+  --text-main-light: rgb(255, 255, 255);
+  --text-secondary-light: rgba(157, 164, 189, 0.6);
+
+  --text-accent: rgb(255, 108, 0);
+
+  --accent: rgb(255, 108, 0);
+  --secondary-light: rgb(247, 247, 247);
+  --secondary-dark: rgb(25, 28, 38);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.button {
+  color: var(--text-main-light);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 9%;
+  text-align: left;
+  text-transform: uppercase;
+
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--text-accent);
+  color: black;
+}
+
+.button.dark {
+  color: var(--text-main-dark);
+}
+
+.container {
+  padding-top: 140px;
+  padding-bottom: 120px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  flex-basis: 148px;
+  padding-top: 32px;
+}
+
+.sidebar-list {
+  display: flex;
+  margin-top: 283px;
+
+  align-items: center;
+
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+.sidebar-item:nth-child(1) {
+  margin-right: 40px;
+}
+.header {
+  display: flex;
+  background: rgba(25, 28, 38, 0.2);
+}
+
+.header-container {
+  display: flex;
+  padding-top: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+.header-list {
+  display: flex;
+  width: 386px;
+  justify-content: space-between;
+
+  color: var(--text-main-light);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 10%;
+  text-align: left;
+}
+
+.header-item {
+  text-transform: capitalize;
+}
+
+.header-link {
+  color: var(--text-main-light);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 10%;
+  text-align: left;
+}
+
+.header-link:hover,
+.header-link-tel:hover {
+  color: var(--text-accent);
+}
+
+.header-contact {
+  margin-left: auto;
+}
+
+.header-link-tel {
+  align-self: center;
+  margin-right: 40px;
+
+  color: var(--text-main-light);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 10%;
+  text-align: left;
+}
+
+/*--------------- about------------- */
+
+.about {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-item:nth-child(2) {
+  margin-left: 30px;
+}
+
+.about-desctiption {
+  margin-left: 64px;
+  width: 483px;
+}
+
+.pre-title {
+  color: var(--text-main-dark);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 10%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.pre-title.dark {
+  color: var(--text-secondary-light);
+}
+
+.title {
+  color: var(--text-main-dark);
+  font-family: Raleway;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 5%;
+  text-align: left;
+
+  margin: 20px 0;
+}
+
+.title.dark {
+  color: var(--text-main-light);
+}
+
+.about-after-title {
+  color: var(--text-secondary-dark);
+  font-family: Open Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 2%;
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+
+.about-article {
+  color: var(--text-secondary-dark);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: 2%;
+  text-align: left;
+
+  margin-bottom: 40px;
+}
+
+/* ---------------prices-------------- */
+
+.prices {
+  background-color: var(--text-secondary-dark);
+}
+
+.prices-lists {
+  display: flex;
+}
+
+/* .prices-list {
+
+} */
+
+.prices-item {
+  display: flex;
+
+  color: var(--text-secondary-light);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 2%;
+  text-align: left;
+}

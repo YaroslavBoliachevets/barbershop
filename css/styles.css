@@ -57,7 +57,8 @@ li {
   text-align: left;
   text-transform: uppercase;
 
-  padding: 12px 20px;
+  height: 40px;
+  padding: 0 20px;
   box-sizing: border-box;
   border: 1px solid var(--accent);
   border-radius: 25px;
@@ -125,10 +126,12 @@ li {
 
 .header-container {
   display: flex;
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 100%;
+  padding-top: 32px;
+}
+
+.header-nav {
+  margin-left: 70px;
+  align-content: center;
 }
 
 .header-list {
@@ -156,6 +159,8 @@ li {
 }
 
 .header-contact {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 

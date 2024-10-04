@@ -43,7 +43,7 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero container">
       <div class="sidebar">
         <ul class="sidebar-list">
           <li class="sidebar-item">
@@ -54,14 +54,17 @@
           </li>
         </ul>
       </div>
-      <h1 class="title">A hair salon for men in Dublin</h1>
-      <p>BarberShop</p>
-      <p>
-        We are experts in fashionable men's haircuts. We work quickly, carefully
-        and with taste.
-      </p>
+      <div class="hero-article">
+        <p class="pre-title dark">A hair salon for men in Dublin</p>
+        <h1 class="title dark">BarberShop</h1>
+        <p class="after-title dark">
+          We are experts in fashionable men's haircuts. We work quickly,
+          carefully and with taste.
+        </p>
+      </div>
     </section>
 
+    <!-- -----------------about--------------------- -->
     <section id="about" class="about">
       <div class="about-wrap container">
         <ul class="about-list">
@@ -84,7 +87,7 @@
         </ul>
 
         <div class="about-desctiption">
-          <p class="pre-title dark">about us</p>
+          <p class="pre-title">about us</p>
           <h2 class="title">The best Barbershop in your city</h2>
           <p class="after-title">
             If you want to add more confidence to your image, you have come to
@@ -103,50 +106,54 @@
       </div>
     </section>
 
+    <!-- ----------------prices--------------------- -->
     <section id="prices" class="prices">
-      <div class="container">
+      <div class="prices-container container">
         <p class="pre-title dark">
           Spend time in the company of the best masters
         </p>
         <h2 class="title dark">Services and prices</h2>
+
         <div class="prices-lists">
-          <div>
+
+          <div class="prices-list-wrap left">
             <ul class="prices-list">
               <li class="prices-item">
-                <p>Men's haircut</p>
-                <p>from 20€</p>
+                <p class="prices-offer">Men's haircut</p>
+                <p class="prices-offer">from 20€</p>
               </li>
               <li class="prices-item">
-                <p>Beard trimming</p>
-                <p>from 10€</p>
+                <p class="prices-offer">Beard trimming</p>
+                <p class="prices-offer">from 10€</p>
               </li>
               <li class="prices-item">
-                <p>Moustache trimming</p>
-                <p>from 10€</p>
+                <p class="prices-offer">Moustache trimming</p>
+                <p class="prices-offer">from 10€</p>
               </li>
               <li class="prices-item">
-                <p>Shaving with a straight razor</p>
-                <p>from 30€</p>
+                <p class="prices-offer">Shaving with a straight razor</p>
+                <p class="prices-offer">from 30€</p>
               </li>
             </ul>
           </div>
-          <div>
+
+          <div class="prices-list-wrap right">
             <ul class="prices-list">
               <li class="prices-item">
-                <p>Haircut by an intern</p>
-                <p>from 10€</p>
+                <p class="prices-offer">Haircut by an intern</p>
+                <p class="prices-offer">from 10€</p>
               </li>
               <li class="prices-item">
-                <p>Haircut with attachment</p>
-                <p>from 10€</p>
+                <p class="prices-offer">Haircut with attachment</p>
+                <p class="prices-offer">from 10€</p>
               </li>
               <li class="prices-item">
-                <p>Children's haircut (up to 12 years)</p>
-                <p>from 25€</p>
+                <p class="prices-offer">Children's haircut (up to 12 years)</p>
+                <p class="prices-offer">from 25€</p>
               </li>
               <li class="prices-item">
-                <p>Camouflage of gray hair</p>
-                <p>from 10€</p>
+                <p class="prices-offer">Camouflage of gray hair</p>
+                <p class="prices-offer">from 10€</p>
               </li>
             </ul>
           </div>
@@ -156,6 +163,7 @@
       </div>
     </section>
 
+    <!-- ----------------reasons-------------------- -->
     <section class="reasons">
       <div class="reasons-wrap container">
         <ul class="reasons-list">
@@ -178,7 +186,7 @@
         </ul>
 
         <div class="reasons-article">
-          <p class="pre-title dark">old traditional school</p>
+          <p class="pre-title">old traditional school</p>
           <h2 class="title">Why do people come to us?</h2>
           <p class="after-title">
             They only say good things about us. But it's better to see and feel
@@ -188,10 +196,11 @@
       </div>
     </section>
 
+    <!-- -------------------masters--------------------- -->
     <section id="masters" class="masters">
-      <div class="container">
+      <div class="masters-container container">
         <div class="wrap">
-          <p class="pre-title dark">for true connoisseurs of atmosphere</p>
+          <p class="pre-title">for true connoisseurs of atmosphere</p>
           <h2 class="title">Our masters</h2>
         </div>
         <ul class="masters-list">
@@ -204,6 +213,37 @@
             />
             <p class="masters-name">John Smith</p>
             <p class="masters-position">Extreme Barber</p>
+            <ul class="master-socials-list">
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="masters-item">
             <img
@@ -214,6 +254,39 @@
             />
             <p class="masters-name">Michele Doe</p>
             <p class="masters-position">Extreme Barber</p>
+
+            <ul class="master-socials-list">
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
           </li>
           <li class="masters-item">
             <img
@@ -224,11 +297,44 @@
             />
             <p class="masters-name">Alan Black</p>
             <p class="masters-position">Extreme Barber</p>
+
+            <ul class="master-socials-list">
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="master-socials-item">
+                <a href="" class="master-socials-link">
+                  <svg class="master-socials-icon">
+                    <use href="./images/svg/svg-icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
           </li>
         </ul>
       </div>
     </section>
-
+    <!-- -------------------gallery--------------------- -->
     <section id="gallery" class="gallery">
       <div class="container">
         <div class="wrap">

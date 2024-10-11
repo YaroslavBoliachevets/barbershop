@@ -115,7 +115,6 @@
         <h2 class="title dark">Services and prices</h2>
 
         <div class="prices-lists">
-
           <div class="prices-list-wrap left">
             <ul class="prices-list">
               <li class="prices-item">
@@ -205,12 +204,20 @@
         </div>
         <ul class="masters-list">
           <li class="masters-item">
-            <img
-              src="./images/muster1-1x.jpeg"
-              alt="master John Smith"
-              width="370"
-              height="346"
-            />
+            <div class="masters-wrap">
+              <img
+                src="./images/muster1-1x.jpeg"
+                alt="master John Smith"
+                width="370"
+                height="346"
+              />
+              <p class="masters-top-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Debitis eligendi suscipit culpa praesentium aperiam magni
+                perferendis quod officiis molestiae corporis.
+              </p>
+            </div>
+
             <p class="masters-name">John Smith</p>
             <p class="masters-position">Extreme Barber</p>
             <ul class="master-socials-list">
@@ -286,7 +293,6 @@
                 </a>
               </li>
             </ul>
-
           </li>
           <li class="masters-item">
             <img
@@ -329,7 +335,6 @@
                 </a>
               </li>
             </ul>
-
           </li>
         </ul>
       </div>
@@ -380,30 +385,94 @@
       </div>
     </section>
 
-    <section>
-      <p>online booking</p>
-    </section>
+    <!-- ============================================== -->
+    <div class="contacts-wrap">
+      <div class="container booking-wrap">
+        <section class="booking">
+          <p class="title dark contacts-namesection">Online booking</p>
+          <form action="" class="booking-form">
+            <div class="booking-wrap">
+              <input
+                type="text"
+                class="booking-input booking-input-text"
+                name="booking-name"
+                placeholder="NAME*"
+              />
 
-    <section id="contacts">
-      <h2>contacts</h2>
-      <address>
-        <ul>
-          <li>
-            <a
-              href="https://maps.app.goo.gl/9nKu6sE1xaQrCgze6"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              >Dublin 1</a
-            >
-          </li>
-          <li><a href=" tel:+0851120705">0851120705</a></li>
-          <li><a href=" mailto:gezka29@gmail.com">gezka29@gmail.com</a></li>
-        </ul>
-      </address>
-      <p>working hours</p>
-      <p>Daily from 9:00 to 22:00</p>
-    </section>
+              <input
+                type="tel"
+                class="booking-input booking-input-long booking-input-text"
+                name="booking-tel"
+                placeholder="PHONE*"
+              />
+            </div>
+
+            <textarea
+              name="message"
+              id=""
+              placeholder="MESSAGE"
+              class="booking-text booking-input-text"
+              rows="5"
+            ></textarea>
+          </form>
+          <button type="submit" class="button booking-button">sent</button>
+        </section>
+
+        <section id="contacts" class="contacts dark">
+          <div>
+            <p class="title dark contacts-namesection">contacts</p>
+            <address>
+              <ul class="contacts-list">
+                <li class="after-title">
+                  <a
+                    class="contacts-link"
+                    href="https://maps.app.goo.gl/9nKu6sE1xaQrCgze6"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    <svg class="contacts-icon">
+                      <use href="./images/svg/svg-icons.svg#icon-map"></use>
+                    </svg>
+
+                    Dublin 1
+                  </a>
+                </li>
+                <li class="after-title">
+                  <a class="contacts-link" href=" tel:+0851120705">
+                    <svg class="contacts-icon">
+                      <use
+                        href="./images/svg/svg-icons.svg#icon-phone"
+                      ></use>
+                    </svg>
+
+                    0851120705</a
+                  >
+                </li>
+                <li class="after-title">
+                  <a class="contacts-link" href=" mailto:gezka29@gmail.com">
+                    <svg class="contacts-icon">
+                      <use href="./images/svg/svg-icons.svg#icon-mail"></use>
+                    </svg>
+                    gezka29@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <p class="pre-title contacts-timetable">working hours</p>
+            <p>Daily from 9:00 to 22:00</p>
+          </div>
+        </section>
+      </div>
+    </div>
 
     <footer></footer>
+
+    <!-- <div class="backdrop">
+      <div class="modal">
+        <button class="modal-close-btn" type="button">
+          <svg class="master-socials-icon"><use href="./images/svg/symbol-defs.svg#icon-x"></use></svg>
+        </button>
+      </div>
+    </div> -->
   </body>
 </html>

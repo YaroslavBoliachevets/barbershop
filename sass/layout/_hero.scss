@@ -1,0 +1,45 @@
+.hero {
+	display: flex;
+	justify-content: left;
+  }
+  
+  .sidebar {
+	width: 93px;
+	margin-top: 50%;
+  }
+  
+  .sidebar-list {
+	display: flex;
+	align-items: center;
+  
+	margin-left: 20px;
+  
+	transform-origin: top left;
+	transform: rotate(-90deg) translate(0px);
+  }
+  
+  .sidebar-list::before {
+	display: block;
+	flex-shrink: 0;
+	content: '';
+  
+	margin-right: 40px;
+  
+	width: 60px;
+	height: 1px;
+	background-color: var(--text-main-dark);
+  }
+  
+  .sidebar-item:nth-child(1) {
+	margin-right: 40px;
+  }
+  
+  .hero-article {
+	flex-grow: 1;
+	background-color: grey;
+	padding: 272px 0 296px 96px;
+  
+	background-image: url(../images/hero.jpeg);
+	background-size: cover;
+  }
+  

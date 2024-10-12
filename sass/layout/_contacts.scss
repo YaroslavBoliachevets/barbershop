@@ -1,0 +1,33 @@
+.contacts {
+	width: calc(100% / 2 - 15px);
+	background: url(../images/contacts-bg.png);
+	background-size: cover;
+  
+	padding: 140px 100px 193px 100px;
+  }
+  
+  .contacts-list {
+	margin-bottom: 70px;
+  }
+  
+  .contacts-timetable {
+  margin-bottom: 20px;
+  }
+  
+  .contacts-link {
+	color: var(--text-secondary-light);
+	display: flex;
+	align-items: center;
+  }
+  
+  .contacts-icon {
+	fill:var(--text-secondary-light);
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+  }
+  
+  .contacts-link:hover .contacts-icon {
+	fill: var(--accent);
+	transition: fill 300ms linear;
+  }

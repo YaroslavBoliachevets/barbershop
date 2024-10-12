@@ -1,0 +1,52 @@
+.header {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+  
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 16px;
+	letter-spacing: 10%;
+	text-align: left;
+  }
+  
+  .header-container {
+	display: flex;
+	margin-top: 32px;
+  }
+  
+  .header-nav {
+	margin-left: 70px;
+	align-content: center;
+  }
+  
+  .header-list {
+	display: flex;
+	width: 386px;
+	justify-content: space-between;
+  
+	color: var(--text-main-light);
+  }
+  
+  .header-item {
+	text-transform: capitalize;
+  }
+  
+  .header-link {
+	color: var(--text-main-light);
+  }
+  
+  .header-contact {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+  }
+  
+  .header-link-tel {
+	align-self: center;
+	margin-right: 40px;
+  
+	color: var(--text-main-light);
+  }

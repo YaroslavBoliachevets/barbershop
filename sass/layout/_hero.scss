@@ -16,22 +16,26 @@
   
 	transform-origin: top left;
 	transform: rotate(-90deg) translate(0px);
+
+	&::before {
+		display: block;
+		flex-shrink: 0;
+		content: '';
+	  
+		margin-right: 40px;
+	  
+		width: 60px;
+		height: 1px;
+		background-color: var(--text-main-dark);
+	  }
   }
   
-  .sidebar-list::before {
-	display: block;
-	flex-shrink: 0;
-	content: '';
   
-	margin-right: 40px;
   
-	width: 60px;
-	height: 1px;
-	background-color: var(--text-main-dark);
-  }
-  
-  .sidebar-item:nth-child(1) {
-	margin-right: 40px;
+  .sidebar-item {
+	&:nth-child(1) {
+		margin-right: 40px;
+	  }
   }
   
   .hero-article {

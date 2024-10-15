@@ -24,9 +24,7 @@ a {
   text-decoration: none;
   color: black;
 }
-
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: var(--text-accent);
   transition: color 300ms linear;
   transition: color 300ms linear;
@@ -70,7 +68,6 @@ li {
   display: flex;
   align-items: center;
 }
-
 .pre-title::before {
   content: "";
   display: inline-block;
@@ -80,21 +77,11 @@ li {
   margin-right: 20px;
   background-color: var(--text-secondary-dark);
 }
-
 .pre-title.dark {
   color: var(--text-secondary-light);
 }
-
 .pre-title::before.dark {
   background-color: var(--text-secondary-light);
-}
-
-.pre-title.contacts-timetable {
-  color: var(--text-main-light);
-}
-
-.pre-title.contacts-timetable::before {
-  background-color: var(--text-main-light);
 }
 
 .title {
@@ -105,10 +92,9 @@ li {
   line-height: 1.16;
   letter-spacing: 5%;
   text-align: left;
-  margin: 20px 0;
   text-transform: capitalize;
+  margin: 20px 0;
 }
-
 .title.dark {
   color: var(--text-main-light);
 }
@@ -123,12 +109,7 @@ li {
   text-align: left;
   margin-bottom: 20px;
 }
-
 .after-title.dark {
-  color: var(--text-secondary-light);
-}
-
-.dark {
   color: var(--text-secondary-light);
 }
 
@@ -139,11 +120,10 @@ li {
   color: var(--text-main-light);
   font-size: 12px;
   font-weight: 600;
-  line-height: 16px;
+  line-height: 1.3333333333;
   letter-spacing: 9%;
-  text-align: left;
   text-transform: uppercase;
-  width: 160px;
+  min-width: 160px;
   height: 40px;
   padding: 0 20px;
   margin: 0 auto;
@@ -153,13 +133,10 @@ li {
   background-color: transparent;
   cursor: pointer;
 }
-
-.button:hover,
-.button:focus {
+.button:hover, .button:focus {
   background-color: var(--accent);
   transition: background-color 300ms linear;
 }
-
 .button.dark {
   color: var(--text-main-dark);
 }
@@ -172,7 +149,7 @@ li {
   width: 100%;
   font-size: 12px;
   font-weight: 600;
-  line-height: 16px;
+  line-height: 1.3333333333;
   letter-spacing: 10%;
   text-align: left;
 }
@@ -231,7 +208,6 @@ li {
   transform-origin: top left;
   transform: rotate(-90deg) translate(0px);
 }
-
 .sidebar-list::before {
   display: block;
   flex-shrink: 0;
@@ -272,7 +248,7 @@ li {
   width: 483px;
 }
 
-.about-article {
+.about-description {
   color: var(--text-secondary-dark);
   font-family: Open Sans;
   font-size: 14px;
@@ -306,11 +282,9 @@ li {
   margin-bottom: 50px;
   flex-wrap: wrap;
 }
-
 .prices-list-wrap.left {
   background: linear-gradient(180deg, rgb(23, 26, 36), rgba(23, 26, 36, 0.2) 100%);
 }
-
 .prices-list-wrap.right {
   background: linear-gradient(180deg, rgb(9, 11, 19), rgba(9, 11, 19, 0.2) 100%);
 }
@@ -326,11 +300,9 @@ li {
   letter-spacing: 2%;
   text-align: left;
 }
-
 .prices-item + .prices-item {
   margin-top: 20px;
 }
-
 .prices-item::before {
   content: "";
   border-bottom: 1px dotted var(--text-secondary-light);
@@ -367,7 +339,6 @@ li {
   flex-direction: column;
   position: relative;
 }
-
 .reasons-item:nth-child(2n+2) {
   margin-left: 30px;
   margin-top: 35px;
@@ -375,7 +346,7 @@ li {
 
 .reasons-counter {
   justify-content: center;
-  color: rgb(48, 48, 48);
+  color: var(--text-main-dark);
   font-family: Open Sans;
   font-size: 42px;
   font-weight: 700;
@@ -383,10 +354,9 @@ li {
   letter-spacing: 5%;
   text-align: center;
 }
-
 .reasons-counter::after {
   content: "+";
-  /* + */
+  color: var(--text-accent);
   position: absolute;
   width: 13px;
   height: 22px;
@@ -395,7 +365,7 @@ li {
 
 .reasons-benefits {
   width: 122px;
-  color: rgb(48, 48, 48);
+  color: var(--text-main-dark);
   font-family: Open Sans;
   font-size: 11px;
   font-weight: 600;
@@ -419,7 +389,6 @@ li {
 
 .wrap {
   width: 500px;
-  /* margin-left: calc((100% - 1170px) / 2); */
   margin-left: calc((33.3333333333% - 30px - 370px) / 2);
 }
 
@@ -439,10 +408,6 @@ li {
   align-items: center;
 }
 
-.masters-item:hover .masters-top-text {
-  transform: translateY(0);
-}
-
 .masters-wrap {
   position: relative;
   overflow: hidden;
@@ -458,8 +423,10 @@ li {
   left: 0;
   transform: translateY(100%);
   transition: transform 300ms linear;
-  /* transition: transform 300ms linear; */
   background-color: rgba(255, 157, 9, 0.7725490196);
+}
+.masters-item:hover .masters-top-text {
+  transform: translateY(0);
 }
 
 .masters-name {
@@ -504,15 +471,14 @@ li {
   align-items: center;
 }
 
-.master-socials-link:hover .master-socials-icon {
-  fill: var(--accent);
-  transition: fill 300ms linear;
-}
-
 .master-socials-icon {
   width: 20px;
   height: 20px;
   fill: var(--text-secondary-dark);
+}
+.master-socials-link:hover .master-socials-icon {
+  fill: var(--accent);
+  transition: fill 300ms linear;
 }
 
 .gallery-pre-title {
@@ -553,7 +519,7 @@ li {
 }
 
 .booking-form-text {
-  color: rgba(157, 164, 189, 0.4);
+  color: var(--text-secondary-light);
   font-family: Open Sans;
   font-size: 11px;
   font-weight: 600;
@@ -572,32 +538,20 @@ li {
   border-bottom: 1px solid var(--text-secondary-light);
   transition: border-color 500ms;
 }
-
-.booking-input + .booking-input {
-  margin-left: 25px;
-}
-
 .booking-input-long {
   width: 270px;
 }
-
-.booking-input:hover,
-.booking-input:focus,
-.booking-text:hover,
-.booking-text:focus {
+.booking-input + .booking-input {
+  margin-left: 25px;
+}
+.booking-input:hover, .booking-input:focus {
   border-color: var(--text-main-light);
 }
-
-.booking-input::placeholder,
-.booking-text::placeholder {
+.booking-input::placeholder {
   color: var(--text-secondary-light);
   transition: color 500ms;
 }
-
-.booking-input:hover::placeholder,
-.booking-input:focus::placeholder,
-.booking-text:hover::placeholder,
-.booking-text:focus::placeholder {
+.booking-input:hover::placeholder, .booking-input:focus::placeholder {
   color: var(--text-main-light);
 }
 
@@ -610,6 +564,16 @@ li {
   resize: none;
   outline: none;
   border-bottom: 1px solid var(--text-secondary-light);
+}
+.booking-text:hover, .booking-text:focus {
+  border-color: var(--text-main-light);
+}
+.booking-text::placeholder {
+  color: var(--text-secondary-light);
+  transition: color 500ms;
+}
+.booking-text:hover::placeholder, .booking-text:focus::placeholder {
+  color: var(--text-main-light);
 }
 
 .booking-button {
@@ -630,6 +594,12 @@ li {
 .contacts-timetable {
   margin-bottom: 20px;
 }
+.pre-title .contacts-timetable {
+  color: var(--text-main-light);
+}
+.pre-title .contacts-timetable::before {
+  background-color: var(--text-main-light);
+}
 
 .contacts-link {
   color: var(--text-secondary-light);
@@ -643,7 +613,6 @@ li {
   height: 20px;
   margin-right: 15px;
 }
-
 .contacts-link:hover .contacts-icon {
   fill: var(--accent);
   transition: fill 300ms linear;

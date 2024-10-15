@@ -7,8 +7,10 @@
 	display: flex;
   }
   
-  .about-item:nth-child(2) {
-	margin-left: 30px;
+  .about-item {
+	&:nth-child(2) {
+		margin-left: 30px;
+	  }
   }
   
   .about-desctiption {
@@ -16,7 +18,7 @@
 	width: 483px;
   }
   
-  .about-article {
+  .about-description {
 	color: var(--text-secondary-dark);
 	font-family: Open Sans;
 	font-size: 14px;

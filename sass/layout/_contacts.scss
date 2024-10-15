@@ -12,6 +12,14 @@
   
   .contacts-timetable {
   margin-bottom: 20px;
+
+  .pre-title & {
+	color: var(--text-main-light);
+  }
+  
+  .pre-title &::before {
+	background-color: var(--text-main-light);
+  }
   }
   
   .contacts-link {
@@ -25,9 +33,11 @@
 	width: 20px;
 	height: 20px;
 	margin-right: 15px;
+
+	.contacts-link:hover & {
+		fill: var(--accent);
+		transition: fill 300ms linear;
+	  }
   }
   
-  .contacts-link:hover .contacts-icon {
-	fill: var(--accent);
-	transition: fill 300ms linear;
-  }
+  

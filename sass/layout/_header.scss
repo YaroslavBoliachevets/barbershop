@@ -1,14 +1,11 @@
 .header {
+	@include font(12, 600, null, 10);
 	display: flex;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
   
-	font-size: 12px;
-	font-weight: 600;
-	line-height: calc(16 / 12);
-	letter-spacing: 10%;
 	text-align: left;
   }
   

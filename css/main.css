@@ -593,8 +593,6 @@ li {
 
 .contacts-timetable {
   margin-bottom: 20px;
-}
-.pre-title .contacts-timetable {
   color: var(--text-main-light);
 }
 .pre-title .contacts-timetable::before {

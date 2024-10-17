@@ -1,13 +1,11 @@
 .button {
+  @include font(null, 600, null, 9);
+  
   display: flex;
   justify-content: center;
   align-items: center;
 
   color: var(--text-main-light);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: calc(16 / 12);
-  letter-spacing: 9%;
   text-transform: uppercase;
 
   min-width: 160px;

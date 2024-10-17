@@ -54,12 +54,9 @@
 }
 
 .masters-name {
+  @include font(18, 400, null, 2);
   color: var(--text-main-dark);
   font-family: Open Sans;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: calc(25 / 18);
-  letter-spacing: 2%;
   text-align: center;
 
   margin-top: 30px;
@@ -67,12 +64,9 @@
 }
 
 .masters-position {
+  @include font(14, 400, null, 2);
   color: rgb(255, 108, 0);
   font-family: Open Sans;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: calc(19 / 14);
-  letter-spacing: 2%;
   text-align: center;
   margin-bottom: 30px;
 }

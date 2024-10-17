@@ -1,6 +1,108 @@
-@mixin font($fs:12, $fw:400, $lh:1.36, $ls) {
-	font-size: $fs + px;
-	font-weight: $fw;
-	line-height: $lh;
-	letter-spacing: $ls;
+// @use './mixins';
+
+@mixin font($fs: 12, $fw: 400, $lh: 1.36, $ls) {
+  font-size: $fs + px;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+/* ------------- mixins pre after title -------------- */
+
+@mixin pre-title {
+  @include font(null, 600, 1.36, 10);
+
+  color: var(--text-main-dark);
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    align-self: center;
+
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+
+    background-color: var(--text-secondary-dark);
+  }
+}
+
+@mixin pre-title--dark {
+  @include pre-title;
+
+  color: var(--text-secondary-light);
+
+  &::before {
+    background-color: var(--text-secondary-light);
+  }
+}
+
+@mixin title {
+  @include font(42, 700, 1.16, 5);
+  color: var(--text-main-dark);
+
+  font-family: Raleway;
+  text-align: left;
+  text-transform: capitalize;
+
+  margin: 20px 0;
+}
+
+@mixin title--dark {
+  @include title;
+  color: var(--text-main-light);
+}
+
+@mixin after-title {
+  @include font(18, 400, 1.6, 2);
+  color: var(--text-secondary-dark);
+  font-family: Open Sans;
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+
+@mixin after-title--dark {
+  @include after-title;
+  color: var(--text-secondary-light);
+}
+
+
+// ------------------button------------------
+
+@mixin button {
+  @include font(null, 600, null, 9);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-main-light);
+  text-transform: uppercase;
+
+  min-width: 160px;
+  height: 40px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    transition: background-color 300ms linear;
+  }
+}
+
+@mixin button--dark {
+  @include button;
+  color: var(--text-main-dark);
 }

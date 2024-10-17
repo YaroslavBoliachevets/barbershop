@@ -10,6 +10,16 @@
   justify-content: center;
 
   padding: 130px 55px;
+
+  &__pre-title--dark {
+    @include mixins.pre-title--dark;
+  }
+
+  &__title--dark {
+
+    @include mixins.title--dark;
+    margin-bottom: 40px;
+  }
 }
 
 .prices-lists {

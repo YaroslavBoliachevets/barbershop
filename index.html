@@ -15,32 +15,32 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
-
   <body>
-    
     <header class="header">
-      <div class="header-container container">
+      <div class="header__container header__container--position container">
         <a href="" class="header__logo">
           <img src="./images/logo.svg" alt="site logo" />
         </a>
-        <nav class="header-nav">
-          <ul class="header-list">
-            <li class="header-item">
-              <a href="#about" class="header-link">about</a>
+        <nav class="navigation navigation--position">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="#about" class="nav-list__link">about</a>
             </li>
-            <li class="header-item">
-              <a href="#prices" class="header-link">services and prices</a>
+            <li class="nav-list__item">
+              <a href="#prices" class="nav-list__link">services and prices</a>
             </li>
-            <li class="header-item">
-              <a href="#masters" class="header-link">masters</a>
+            <li class="nav-list__item">
+              <a href="#masters" class="nav-list__link">masters</a>
             </li>
-            <li class="header-item">
-              <a href="#contacts" class="header-link">contacts</a>
+            <li class="nav-list__item">
+              <a href="#contacts" class="nav-list__link">contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header-contact">
-          <a href="tel:+0851120705" class="header-link-tel">0851120705</a>
+        <div class="header-contact header-contact-container">
+          <a href="tel:+0851120705" class="header-contact__link-tel"
+            >0851120705</a
+          >
           <button type="button" class="button">online booking</button>
         </div>
       </div>
@@ -48,19 +48,21 @@
 
     <section class="hero container">
       <div class="sidebar">
-        <ul class="sidebar-list">
-          <li class="sidebar-item">
-            <a href="" class="sidebar-link">Instagram</a>
+        <ul class="sidebar-list sidebar-list--position">
+          <li class="sidebar-list__item">
+            <a href="" class="sidebar-list__link">Instagram</a>
           </li>
-          <li class="sidebar-item">
-            <a href="" class="sidebar-link">Youtube</a>
+          <li class="sidebar-list__item">
+            <a href="" class="sidebar-list__link">Youtube</a>
           </li>
         </ul>
       </div>
       <div class="hero-article">
-        <p class="pre-title dark">A hair salon for men in Dublin</p>
-        <h1 class="title dark">BarberShop</h1>
-        <p class="after-title dark">
+        <p class="hero-article__pre-title--dark">
+          A hair salon for men in Dublin
+        </p>
+        <h1 class="hero-article__title--dark">BarberShop</h1>
+        <p class="hero-article__after-title--dark">
           We are experts in fashionable men's haircuts. We work quickly,
           carefully and with taste.
         </p>
@@ -71,7 +73,7 @@
     <section id="about" class="about">
       <div class="about-wrap container">
         <ul class="about-list">
-          <li class="about-item">
+          <li class="about-list__item">
             <img
               src="./images/about1-1x.jpeg"
               alt="shaving"
@@ -79,7 +81,7 @@
               height="445"
             />
           </li>
-          <li class="about-item">
+          <li class="about-list__item">
             <img
               src="./images/about2-1x.jpeg"
               alt="cutting"
@@ -89,14 +91,14 @@
           </li>
         </ul>
 
-        <div class="about-desctiption">
-          <p class="pre-title">about us</p>
-          <h2 class="title">The best Barbershop in your city</h2>
-          <p class="after-title">
+        <div class="about-article about-article--position">
+          <p class="about-article__pre-title">about us</p>
+          <h2 class="about-article__title">The best Barbershop in your city</h2>
+          <p class="about-article__after-title">
             If you want to add more confidence to your image, you have come to
             the right place.
           </p>
-          <p class="about-description">
+          <p class="about-article__description">
             We are a team that never rests on our laurels and yearns for change.
             And when you fall into the hands of our master, you will never be
             the same again. We are a team that is always "on the same
@@ -112,10 +114,10 @@
     <!-- ----------------prices--------------------- -->
     <section id="prices" class="prices">
       <div class="prices-container container">
-        <p class="pre-title dark">
+        <p class="prices-container__pre-title--dark">
           Spend time in the company of the best masters
         </p>
-        <h2 class="title dark">Services and prices</h2>
+        <h2 class="prices-container__title--dark">Services and prices</h2>
 
         <div class="prices-lists">
           <div class="prices-list-wrap left">
@@ -258,17 +260,17 @@
           <li class="masters-item">
             <div class="masters-wrap">
               <img
-              src="./images/master2-1x.jpeg"
-              alt="master John Smith"
-              width="370"
-              height="346"
-            />
+                src="./images/master2-1x.jpeg"
+                alt="master John Smith"
+                width="370"
+                height="346"
+              />
 
-            <p class="masters-top-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-              eligendi suscipit culpa praesentium aperiam magni perferendis quod
-              officiis molestiae corporis.
-            </p>
+              <p class="masters-top-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Debitis eligendi suscipit culpa praesentium aperiam magni
+                perferendis quod officiis molestiae corporis.
+              </p>
             </div>
             <p class="masters-name">Michele Doe</p>
             <p class="masters-position">Extreme Barber</p>
@@ -308,16 +310,16 @@
           <li class="masters-item">
             <div class="masters-wrap">
               <img
-              src="./images/master3-1x.jpeg"
-              alt="master John Smith"
-              width="370"
-              height="346"
-            />
-            <p class="masters-top-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-              eligendi suscipit culpa praesentium aperiam magni perferendis quod
-              officiis molestiae corporis.
-            </p>
+                src="./images/master3-1x.jpeg"
+                alt="master John Smith"
+                width="370"
+                height="346"
+              />
+              <p class="masters-top-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Debitis eligendi suscipit culpa praesentium aperiam magni
+                perferendis quod officiis molestiae corporis.
+              </p>
             </div>
             <p class="masters-name">Alan Black</p>
             <p class="masters-position">Extreme Barber</p>

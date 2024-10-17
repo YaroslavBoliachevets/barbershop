@@ -1,50 +1,60 @@
 @use '../utils/mixins';
 .header {
-	@include mixins.font(12, 600, null, 10);
-	display: flex;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-  
-	text-align: left;
+  @include mixins.font(12, 600, null, 10);
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  text-align: left;
+}
+
+.header__container {
+  display: flex;
+
+  &--position {
+    margin-top: 32px;
   }
-  
-  .header-container {
-	display: flex;
-	margin-top: 32px;
+}
+
+.navigation {
+  align-content: center;
+
+  &--position {
+    margin-left: 70px;
   }
-  
-  .header-nav {
-	margin-left: 70px;
-	align-content: center;
+}
+
+.nav-list {
+  display: flex;
+  width: 386px;
+  justify-content: space-between;
+
+  color: var(--text-main-light);
+
+  &__item {
+    text-transform: capitalize;
   }
-  
-  .header-list {
-	display: flex;
-	width: 386px;
-	justify-content: space-between;
-  
-	color: var(--text-main-light);
+
+  &__link {
+    color: var(--text-main-light);
   }
-  
-  .header-item {
-	text-transform: capitalize;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  &__link-tel {
+    align-self: center;
+    margin-right: 40px;
+
+    color: var(--text-main-light);
   }
-  
-  .header-link {
-	color: var(--text-main-light);
+
+  &-container {
+	margin-right: 20px;
   }
-  
-  .header-contact {
-	display: flex;
-	align-items: center;
-	margin-left: auto;
-  }
-  
-  .header-link-tel {
-	align-self: center;
-	margin-right: 40px;
-  
-	color: var(--text-main-light);
-  }
+}

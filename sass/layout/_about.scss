@@ -9,24 +9,45 @@
 	display: flex;
   }
   
-  .about-item {
+  .about__item {
 	&:nth-child(2) {
 		margin-left: 30px;
 	  }
   }
   
-  .about-desctiption {
-	margin-left: 64px;
+  .about-article {
 	width: 483px;
+
+	&--position {
+		margin-left: 64px;
+	}
+
+	&__pre-title {
+		@include mixins.pre-title;
+	}
+
+	&__title {
+		@include mixins.title;
+	}
+
+	&__after-title {
+		@include mixins.after-title;
+	}
+
+	&__description {
+		@include mixins.font(14, 400, 1.85, 2);
+		
+		color: var(--text-secondary-dark);
+		font-family: Open Sans;
+		text-align: left;
+	  
+		margin-bottom: 40px;
+	  }
+
+	  &__button {
+		@include mixins.button--dark;
+	  }
   }
   
-  .about-description {
-	@include mixins.font(14, 400, 1.85, 2);
-	
-	color: var(--text-secondary-dark);
-	font-family: Open Sans;
-	text-align: left;
   
-	margin-bottom: 40px;
-  }
   

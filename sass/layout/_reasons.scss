@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .reasons-wrap {
 	display: flex;
 	justify-content: center;
@@ -32,7 +34,7 @@
   
   
   .reasons-counter {
-	@include font(42, 700, null, 5);
+	@include mixins.font(42, 700, null, 5);
 
 	justify-content: center;
 	color: var(--text-main-dark);
@@ -51,7 +53,7 @@
   }
   
   .reasons-benefits {
-	@include font(11, 600, null, 0);
+	@include mixins.font(11, 600, null, 0);
 	width: 122px;
 	color: var(--text-main-dark);
 	font-family: Open Sans;

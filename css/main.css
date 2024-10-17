@@ -3,6 +3,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: red;
   margin: 0;
 }
 
@@ -59,11 +60,11 @@ li {
 
 /* -------------pre after title -------------- */
 .pre-title {
-  color: var(--text-main-dark);
-  font-size: 11px;
+  font-size: px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10%;
+  letter-spacing: 10;
+  color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -85,12 +86,12 @@ li {
 }
 
 .title {
-  color: var(--text-main-dark);
-  font-family: Raleway;
   font-size: 42px;
   font-weight: 700;
   line-height: 1.16;
-  letter-spacing: 5%;
+  letter-spacing: 5;
+  color: var(--text-main-dark);
+  font-family: Raleway;
   text-align: left;
   text-transform: capitalize;
   margin: 20px 0;
@@ -100,12 +101,12 @@ li {
 }
 
 .after-title {
-  color: var(--text-secondary-dark);
-  font-family: Open Sans;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: 2%;
+  letter-spacing: 2;
+  color: var(--text-secondary-dark);
+  font-family: Open Sans;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -114,14 +115,13 @@ li {
 }
 
 .button {
+  font-size: px;
+  font-weight: 600;
+  letter-spacing: 9;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--text-main-light);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.3333333333;
-  letter-spacing: 9%;
   text-transform: uppercase;
   min-width: 160px;
   height: 40px;
@@ -142,15 +142,14 @@ li {
 }
 
 .header {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 10;
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.3333333333;
-  letter-spacing: 10%;
   text-align: left;
 }
 
@@ -249,12 +248,12 @@ li {
 }
 
 .about-description {
-  color: var(--text-secondary-dark);
-  font-family: Open Sans;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.85;
-  letter-spacing: 2%;
+  letter-spacing: 2;
+  color: var(--text-secondary-dark);
+  font-family: Open Sans;
   text-align: left;
   margin-bottom: 40px;
 }
@@ -290,14 +289,14 @@ li {
 }
 
 .prices-item {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 2;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   color: var(--text-secondary-light);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 2%;
   text-align: left;
 }
 .prices-item + .prices-item {
@@ -345,13 +344,12 @@ li {
 }
 
 .reasons-counter {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 5;
   justify-content: center;
   color: var(--text-main-dark);
   font-family: Open Sans;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.3571428571;
-  letter-spacing: 5%;
   text-align: center;
 }
 .reasons-counter::after {
@@ -364,13 +362,12 @@ li {
 }
 
 .reasons-benefits {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
   width: 122px;
   color: var(--text-main-dark);
   font-family: Open Sans;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.3636363636;
-  letter-spacing: 0%;
   text-align: center;
 }
 
@@ -430,24 +427,22 @@ li {
 }
 
 .masters-name {
-  color: var(--text-main-dark);
-  font-family: Open Sans;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.3888888889;
-  letter-spacing: 2%;
+  letter-spacing: 2;
+  color: var(--text-main-dark);
+  font-family: Open Sans;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 8px;
 }
 
 .masters-position {
-  color: rgb(255, 108, 0);
-  font-family: Open Sans;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.3571428571;
-  letter-spacing: 2%;
+  letter-spacing: 2;
+  color: rgb(255, 108, 0);
+  font-family: Open Sans;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -519,12 +514,11 @@ li {
 }
 
 .booking-form-text {
-  color: var(--text-secondary-light);
-  font-family: Open Sans;
   font-size: 11px;
   font-weight: 600;
-  line-height: 1.3636363636;
-  letter-spacing: 10%;
+  letter-spacing: 10;
+  color: var(--text-secondary-light);
+  font-family: Open Sans;
   text-align: left;
   text-transform: uppercase;
 }

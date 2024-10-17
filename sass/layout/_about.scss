@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .about-wrap {
 	display: flex;
 	justify-content: center;
@@ -19,7 +21,7 @@
   }
   
   .about-description {
-	@include font(14, 400, 1.85, 2);
+	@include mixins.font(14, 400, 1.85, 2);
 	
 	color: var(--text-secondary-dark);
 	font-family: Open Sans;

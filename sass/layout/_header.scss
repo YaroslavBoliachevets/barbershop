@@ -1,5 +1,6 @@
+@use '../utils/mixins';
 .header {
-	@include font(12, 600, null, 10);
+	@include mixins.font(12, 600, null, 10);
 	display: flex;
 	position: absolute;
 	top: 0;

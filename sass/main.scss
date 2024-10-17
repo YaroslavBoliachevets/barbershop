@@ -1,18 +1,19 @@
-@import './base/common';
-@import './base/reset';
+@use './base/common';
+@use './base/reset';
 
-@import './utils/vars';
+@use './utils/vars';
+@use './utils/mixins';
 
-@import './components/container';
-@import './components/titles';
-@import './components/button';
+@use './components/container';
+@use './components/titles';
+@use './components/button';
 
-@import './layout/header';
-@import './layout/hero';
-@import './layout/about';
-@import './layout/prices';
-@import './layout/reasons';
-@import './layout/masters';
-@import './layout/gallery';
-@import './layout/booking';
-@import './layout/contacts';
+@use './layout/header';
+@use './layout/hero';
+@use './layout/about';
+@use './layout/prices';
+@use './layout/reasons';
+@use './layout/masters';
+@use './layout/gallery';
+@use './layout/booking';
+@use './layout/contacts';

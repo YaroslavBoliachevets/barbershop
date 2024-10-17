@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .contacts-wrap {
   background-color: var(--secondary-dark);
 }
@@ -23,7 +25,7 @@
 }
 
 .booking-form-text {
-  @include font(11, 600, null, 10);
+  @include mixins.font(11, 600, null, 10);
   color: var(--text-secondary-light);
   font-family: Open Sans;
   text-align: left;

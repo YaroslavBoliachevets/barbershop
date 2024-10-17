@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .prices-container {
   background: rgb(17, 19, 25);
   background-image: url(../images/img.png);
@@ -41,7 +43,7 @@
 }
 
 .prices-item {
-  @include font(18, 400, 1.6, 2);
+  @include mixins.font(18, 400, 1.6, 2);
   display: flex;
   justify-content: space-between;
   align-items: baseline;

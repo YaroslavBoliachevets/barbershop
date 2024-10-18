@@ -1,21 +1,27 @@
 @use '../utils/mixins';
 
-.contacts-wrap {
+.connection-container {
   background-color: var(--secondary-dark);
 }
 
-.container-wrap {
+.connection-wrap {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
 }
 
 .booking {
   width: calc(100% / 2 + 15px);
   padding: 130px 0px 193px 0px;
   margin-right: 40px;
-}
 
-.contacts-namesection {
-  margin-bottom: 40px;
+  &__title--dark {
+    @include mixins.title--dark;
+  }
+
+  &__title--position {
+    margin-bottom: 40px;
+  }
 }
 
 .booking-wrap {
@@ -24,75 +30,78 @@
   margin-bottom: 23px;
 }
 
-.booking-form-text {
-  @include mixins.font(11, 600, null, 10);
-  color: var(--text-secondary-light);
-  font-family: Open Sans;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.booking-input {
-  width: 260px;
-  height: 24px;
-
-  background-color: transparent;
-  outline: none;
-  border: 0px;
-  border-bottom: 1px solid var(--text-secondary-light);
-  transition: border-color 500ms;
-
-  &-long {
-    width: 270px;
-  }
-
-  & + & {
-    margin-left: 25px;
-  }
-
-  &:hover,
-  &:focus {
-    border-color: var(--text-main-light);
-  }
-
-  &::placeholder {
+.booking-form {
+  &-text {
+    @include mixins.font(11, 600, null, 10);
     color: var(--text-secondary-light);
-    transition: color 500ms;
+    font-family: Open Sans;
+    text-align: left;
+    text-transform: uppercase;
   }
 
-  &:hover::placeholder,
-  &:focus::placeholder {
-    color: var(--text-main-light);
+  &__input {
+    width: 260px;
+    height: 24px;
+
+    background-color: transparent;
+    outline: none;
+    border: 0px;
+    border-bottom: 1px solid var(--text-secondary-light);
+    transition: border-color 500ms;
+
+    &-long {
+      width: 270px;
+    }
+
+    & + & {
+      margin-left: 25px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var(--text-main-light);
+    }
+
+    &::placeholder {
+      color: var(--text-secondary-light);
+      transition: color 500ms;
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+      color: var(--text-main-light);
+    }
+
+    &--text {
+      width: 100%;
+      height: 76px;
+      margin-bottom: 44px;
+
+      background-color: transparent;
+      border: none;
+      resize: none;
+      outline: none;
+      border-bottom: 1px solid var(--text-secondary-light);
+
+      &:hover,
+      &:focus {
+        border-color: var(--text-main-light);
+      }
+
+      &::placeholder {
+        color: var(--text-secondary-light);
+        transition: color 500ms;
+      }
+
+      &:hover::placeholder,
+      &:focus::placeholder {
+        color: var(--text-main-light);
+      }
+    }
   }
 }
 
-.booking-text {
-  width: 100%;
-  height: 76px;
-  margin-bottom: 44px;
-
-  background-color: transparent;
-  border: none;
-  resize: none;
-  outline: none;
-  border-bottom: 1px solid var(--text-secondary-light);
-
-  &:hover,
-  &:focus {
-    border-color: var(--text-main-light);
-  }
-
-  &::placeholder {
-    color: var(--text-secondary-light);
-    transition: color 500ms;
-  }
-
-  &:hover::placeholder,
-  &:focus::placeholder {
-    color: var(--text-main-light);
-  }
-}
-
-.booking-button {
+.booking-form__button {
+  @include mixins.button;
   margin: 0;
 }

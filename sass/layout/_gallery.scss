@@ -1,13 +1,18 @@
-.gallery-pre-title {
-  margin-bottom: 40px;
+@use '../utils/mixins';
+
+.gallery-titles {
+  &__pre-title {
+    @include mixins.pre-title;
+    margin-bottom: 40px;
+  }
 }
 .gallery-list {
   display: flex;
   justify-content: center;
-}
 
-.gallery-item {
-  &:nth-child(n + 2) {
-    margin-left: 30px;
+  &__item {
+    &:nth-child(n + 2) {
+      margin-left: 30px;
+    }
   }
 }

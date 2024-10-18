@@ -1,38 +1,59 @@
+@use '../utils/mixins';
+
 .contacts {
   width: calc(100% / 2 - 15px);
   background: url(../images/contacts-bg.png);
   background-size: cover;
 
   padding: 140px 100px 193px 100px;
+
+  &__title--dark {
+    @include mixins.title--dark;
+  }
+
+  &__title--position {
+    margin-bottom: 40px;
+  }
+
+  &__pre-title--dark {
+    @include mixins.pre-title--dark;
+  }
+
+  &__pre-title {
+    margin-bottom: 20px;
+    color: var(--text-main-light);
+  
+    .contacts__pre-title &::before {
+      background-color: var(--text-main-light);
+    }
+  }
 }
 
 .contacts-list {
-  margin-bottom: 70px;
-}
-
-.contacts-timetable {
-  margin-bottom: 20px;
-  color: var(--text-main-light);
- 
-  .pre-title &::before {
-    background-color: var(--text-main-light);
+  &--position {
+    margin-bottom: 70px;
   }
-}
 
-.contacts-link {
-  color: var(--text-secondary-light);
-  display: flex;
-  align-items: center;
-}
-
-.contacts-icon {
-  fill: var(--text-secondary-light);
-  width: 20px;
-  height: 20px;
-  margin-right: 15px;
-
-  .contacts-link:hover & {
-    fill: var(--accent);
-    transition: fill 300ms linear;
+  &__item {
+    @include mixins.after-title
   }
+
+  &__link {
+    color: var(--text-secondary-light);
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: var(--text-secondary-light);
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  
+    .contacts-link:hover & {
+      fill: var(--accent);
+      transition: fill 300ms linear;
+    }
+  }
+  
 }

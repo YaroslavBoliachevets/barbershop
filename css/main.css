@@ -993,6 +993,8 @@ li {
 .contacts {
   margin: 0 auto;
   padding: 84px 30px;
+  background: url(../images/contacts-bg.png);
+  background-size: cover;
 }
 .contacts--bg {
   background: url(../images/contacts-bg.png);

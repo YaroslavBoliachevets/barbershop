@@ -15,7 +15,8 @@
   margin: 0 auto;
   padding: 84px 30px;
 
-  
+  background: url(../images/contacts-bg.png);
+    background-size: cover;
 
   &__title--dark {
     @include mixins.title--dark;

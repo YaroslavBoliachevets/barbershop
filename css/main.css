@@ -822,23 +822,20 @@ li {
   }
 }
 
-.container--padd {
-  padding: 0;
-}
-
 .connection-wrap {
   margin: 0 auto;
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .connection-wrap {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .connection-wrap {
     display: flex;
     justify-content: center;
   }
-}
-.connection-wrap--bg {
-  background: url(../images/contacts-bg.png);
-  background-size: cover;
-  flex-grow: 1;
 }
 
 @media screen and (min-width: 1200px) {
@@ -849,24 +846,23 @@ li {
 }
 
 .booking {
-  width: 100%;
   background-color: var(--secondary-dark);
 }
 @media screen and (max-width: 767px) {
   .booking {
-    padding: 84px 0px;
+    padding: 84px 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .booking {
+    width: 690px;
     padding: 100px 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .booking {
-    width: calc(50% + 15px);
-    padding: 130px 0px 193px 30px;
-    margin-right: 40px;
+    padding: 130px 0px 193px 0px;
+    width: 560px;
   }
 }
 .booking__title--dark {

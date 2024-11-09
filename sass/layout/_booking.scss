@@ -1,20 +1,20 @@
 @use '../utils/mixins';
 .booking {
-  width: 100%;
+
   background-color: var(--secondary-dark);
 
   @media screen and (max-width: 767px) {
-    padding: 84px 0px;
+    padding: 84px 30px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+	width: 690px;
     padding: 100px 30px;
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc(100% / 2 + 15px);
-    padding: 130px 0px 193px 30px;
-    margin-right: 40px;
+    padding: 130px 0px 193px 0px;
+	width: 560px;
   }
 
   &__title--dark {

@@ -8,22 +8,17 @@
   }
 }
 
-.container--padd {
-  padding: 0;
-}
 
 .connection-wrap {
   margin: 0 auto;   
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:767px) and (max-width:1199px) {
     display: flex;
     justify-content: center;
   }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
 
-  &--bg {
-    background: url(../images/contacts-bg.png);
-    background-size: cover;
-
-    flex-grow: 1;
   }
 }
 

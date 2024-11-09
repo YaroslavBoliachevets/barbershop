@@ -5,12 +5,12 @@
 
   @media screen and (min-width:1200px) {
     display: flex;
+    justify-content: center;
   }
 }
 
 
 .connection-wrap {
-  margin: 0 auto;   
   @media screen and (min-width:767px) and (max-width:1199px) {
     display: flex;
     justify-content: center;

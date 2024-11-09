@@ -248,7 +248,7 @@ li {
   background-size: cover;
 }
 .hero-article__pre-title--dark {
-  font-size: px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 10;
@@ -313,7 +313,7 @@ li {
   margin-left: 64px;
 }
 .about-article__pre-title {
-  font-size: px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 10;
@@ -397,7 +397,7 @@ li {
   padding: 130px 55px;
 }
 .prices-container__pre-title--dark {
-  font-size: px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 10;
@@ -537,7 +537,7 @@ li {
   width: 570px;
 }
 .reasons-article__pre-title {
-  font-size: px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 10;
@@ -605,7 +605,7 @@ li {
   margin-right: auto;
 }
 .masters-titles__pre-title {
-  font-size: px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 10;
@@ -634,6 +634,12 @@ li {
   text-transform: capitalize;
   margin: 20px 0;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .masters-titles__title {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .masters-list {
@@ -690,7 +696,7 @@ li {
 }
 @media screen and (max-width: 767px) {
   .masters-description__img {
-    width: 418px;
+    max-width: 300px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -754,7 +760,7 @@ li {
 }
 
 .gallery-titles__pre-title {
-  font-size: px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 10;
@@ -763,6 +769,12 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .gallery-titles__pre-title {
+    display: flex;
+    justify-content: center;
+  }
 }
 .gallery-titles__pre-title::before {
   content: "";
@@ -799,7 +811,7 @@ li {
 }
 @media screen and (max-width: 767px) {
   .gallery-list__img {
-    width: 418px;
+    max-width: 418px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -819,12 +831,10 @@ li {
 @media screen and (min-width: 1200px) {
   .connection-container {
     display: flex;
+    justify-content: center;
   }
 }
 
-.connection-wrap {
-  margin: 0 auto;
-}
 @media screen and (min-width: 767px) and (max-width: 1199px) {
   .connection-wrap {
     display: flex;
@@ -855,13 +865,13 @@ li {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .booking {
-    width: 690px;
+    max-width: 690px;
     padding: 100px 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .booking {
-    padding: 130px 0px 193px 0px;
+    padding: 130px 40px 193px 0;
     width: 560px;
   }
 }
@@ -1002,7 +1012,7 @@ li {
 @media screen and (min-width: 1200px) {
   .contacts {
     box-sizing: border-box;
-    width: 625px;
+    max-width: 625px;
     padding: 130px 100px;
   }
 }
@@ -1099,7 +1109,7 @@ li {
 }
 .timetable__pre-title--dark {
   margin-bottom: 20px;
-  font-size: px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 10;

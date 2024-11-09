@@ -8,12 +8,12 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-	width: 690px;
+	max-width: 690px;
     padding: 100px 30px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 130px 0px 193px 0px;
+    padding: 130px 40px 193px 0;
 	width: 560px;
   }
 

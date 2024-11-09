@@ -1,4 +1,4 @@
-@mixin font($fs: 12, $fw: 400, $lh: 1.36, $ls) {
+@mixin font($fs: 12, $fw: 400, $lh: 1.36, $ls:10%) {
   font-size: $fs + px;
   font-weight: $fw;
   line-height: $lh;
@@ -8,7 +8,7 @@
 /* ------------- mixins pre after title -------------- */
 
 @mixin pre-title {
-  @include font(null, 600, 1.36, 10);
+  @include font(12, 600, 1.36, 10);
 
   color: var(--text-main-dark);
   text-transform: uppercase;

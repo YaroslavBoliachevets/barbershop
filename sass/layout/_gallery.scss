@@ -7,6 +7,12 @@
 
 .gallery-titles {
   &__pre-title {
+   
+    @media screen and (max-width:767px) {
+      display: flex;
+      justify-content: center;
+    }
+
     @include mixins.pre-title;
     margin-bottom: 40px;
   }
@@ -39,7 +45,7 @@
 
   &__img {
     @media screen and (max-width: 767px) {
-      width: 418px;
+      max-width: 418px;
     }
   
     @media screen and (min-width: 768px) and (max-width: 1199px) {

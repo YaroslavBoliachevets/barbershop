@@ -1,19 +1,21 @@
 @use '../utils/mixins';
-
-.connection-container {
-  background-color: var(--secondary-dark);
-}
-
-.connection-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 23px;
-}
-
 .booking {
-  width: calc(100% / 2 + 15px);
-  padding: 130px 0px 193px 0px;
-  margin-right: 40px;
+  width: 100%;
+  background-color: var(--secondary-dark);
+
+  @media screen and (max-width: 767px) {
+    padding: 84px 0px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 100px 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 2 + 15px);
+    padding: 130px 0px 193px 30px;
+    margin-right: 40px;
+  }
 
   &__title--dark {
     @include mixins.title--dark;
@@ -21,13 +23,20 @@
 
   &__title--position {
     margin-bottom: 40px;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
 .booking-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 23px;
+  @media screen and (min-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
 }
 
 .booking-form {
@@ -54,7 +63,9 @@
     }
 
     & + & {
-      margin-left: 25px;
+      @media screen and (min-width: 767px) {
+        margin-left: 25px;
+      }
     }
 
     &:hover,
@@ -74,9 +85,10 @@
 
     &--text {
       width: 100%;
-      height: 76px;
+      height: 24px;
       margin-bottom: 44px;
 
+      color: var(--text-main-light);
       background-color: transparent;
       border: none;
       resize: none;
@@ -99,9 +111,18 @@
       }
     }
   }
+
+  &__message {
+    height: 76px;
+  }
 }
 
 .booking-form__button {
   @include mixins.button;
   margin: 0;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+  }
 }
+

@@ -1,0 +1,37 @@
+@use '../utils/mixins';
+
+.connection-container {
+  background-color: var(--secondary-dark);
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+  }
+}
+
+.container--padd {
+  padding: 0;
+}
+
+.connection-wrap {
+  margin: 0 auto;   
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--bg {
+    background: url(../images/contacts-bg.png);
+    background-size: cover;
+
+    flex-grow: 1;
+  }
+}
+
+.connection-wrap--bg {
+ @media screen and (min-width: 1200px) {
+    width: calc(100% / 2 - 15px);
+    padding: 140px 100px 193px 100px;
+  }
+}
+
+

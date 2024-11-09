@@ -28,14 +28,6 @@
   a {
 	text-decoration: none;
 	color: black;
-
-
-  &:hover,
-  &:focus {
-	color: var(--text-accent);
-	transition: color 300ms linear;
-	transition: color 300ms linear;
-  }
   }
  
   

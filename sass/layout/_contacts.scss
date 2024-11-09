@@ -1,47 +1,69 @@
 @use '../utils/mixins';
 
 .contacts {
-  width: calc(100% / 2 - 15px);
-  background: url(../images/contacts-bg.png);
-  background-size: cover;
+  &--bg {
+    background: url(../images/contacts-bg.png);
+    background-size: cover;
 
-  padding: 140px 100px 193px 100px;
+	@media screen and (min-width: 1200px) {
+		box-sizing: border-box;
+		width: 625px;
+		padding: 130px 100px;
+	  }
+  }
+
+  margin: 0 auto;
+  padding: 84px 30px;
+
+  
 
   &__title--dark {
     @include mixins.title--dark;
   }
 
   &__title--position {
+    display: flex;
+    justify-content: center;
     margin-bottom: 40px;
-  }
 
-  &__pre-title--dark {
-    @include mixins.pre-title--dark;
-  }
-
-  &__pre-title {
-    margin-bottom: 20px;
-    color: var(--text-main-light);
-  
-    .contacts__pre-title &::before {
-      background-color: var(--text-main-light);
+    @media screen and (min-width: 768px) {
+      justify-content: start;
     }
   }
 }
 
-.contacts-list {
-  &--position {
-    margin-bottom: 70px;
+.contacts-wrap {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+  }
+}
+
+.address {
+  margin-bottom: 44px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
   }
 
+  @media screen and (min-width: 768px) {
+    width: 330px;
+  }
+}
+
+.contacts-list {
   &__item {
-    @include mixins.after-title
+    @include mixins.after-title;
   }
 
   &__link {
     color: var(--text-secondary-light);
-    display: flex;
-    align-items: center;
+
+    &:hover {
+      .contacts-list__icon {
+        fill: var(--text-accent);
+        transition: fill 300ms linear;
+      }
+    }
   }
 
   &__icon {
@@ -49,11 +71,26 @@
     width: 20px;
     height: 20px;
     margin-right: 15px;
-  
-    .contacts-link:hover & {
-      fill: var(--accent);
-      transition: fill 300ms linear;
-    }
   }
-  
+}
+
+.timetable {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 330px;
+    margin-left: auto;
+  }
+
+  &__after-title {
+    @include mixins.after-title--dark;
+  }
+
+  &__pre-title--dark {
+    margin-bottom: 20px;
+    @include mixins.pre-title--dark;
+  }
 }

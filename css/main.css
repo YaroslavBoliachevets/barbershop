@@ -1,3 +1,9 @@
+a:hover, a:focus {
+  color: var(--text-accent);
+  transition: color 300ms linear;
+  transition: color 300ms linear;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -23,11 +29,6 @@ img {
 a {
   text-decoration: none;
   color: black;
-}
-a:hover, a:focus {
-  color: var(--text-accent);
-  transition: color 300ms linear;
-  transition: color 300ms linear;
 }
 
 ul {
@@ -815,17 +816,58 @@ li {
 .connection-container {
   background-color: var(--secondary-dark);
 }
+@media screen and (min-width: 1200px) {
+  .connection-container {
+    display: flex;
+  }
+}
+
+.container--padd {
+  padding: 0;
+}
 
 .connection-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 23px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .connection-wrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+.connection-wrap--bg {
+  background: url(../images/contacts-bg.png);
+  background-size: cover;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  .connection-wrap--bg {
+    width: calc(50% - 15px);
+    padding: 140px 100px 193px 100px;
+  }
 }
 
 .booking {
-  width: calc(50% + 15px);
-  padding: 130px 0px 193px 0px;
-  margin-right: 40px;
+  width: 100%;
+  background-color: var(--secondary-dark);
+}
+@media screen and (max-width: 767px) {
+  .booking {
+    padding: 84px 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .booking {
+    padding: 100px 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .booking {
+    width: calc(50% + 15px);
+    padding: 130px 0px 193px 30px;
+    margin-right: 40px;
+  }
 }
 .booking__title--dark {
   font-size: 42px;
@@ -842,11 +884,19 @@ li {
 .booking__title--position {
   margin-bottom: 40px;
 }
+@media screen and (max-width: 767px) {
+  .booking__title--position {
+    display: flex;
+    justify-content: center;
+  }
+}
 
-.booking-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 23px;
+@media screen and (min-width: 767px) {
+  .booking-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
 }
 
 .booking-form-text {
@@ -870,8 +920,10 @@ li {
 .booking-form__input-long {
   width: 270px;
 }
-.booking-form__input + .booking-form__input {
-  margin-left: 25px;
+@media screen and (min-width: 767px) {
+  .booking-form__input + .booking-form__input {
+    margin-left: 25px;
+  }
 }
 .booking-form__input:hover, .booking-form__input:focus {
   border-color: var(--text-main-light);
@@ -885,8 +937,9 @@ li {
 }
 .booking-form__input--text {
   width: 100%;
-  height: 76px;
+  height: 24px;
   margin-bottom: 44px;
+  color: var(--text-main-light);
   background-color: transparent;
   border: none;
   resize: none;
@@ -902,6 +955,9 @@ li {
 }
 .booking-form__input--text:hover::placeholder, .booking-form__input--text:focus::placeholder {
   color: var(--text-main-light);
+}
+.booking-form__message {
+  height: 76px;
 }
 
 .booking-form__button {
@@ -928,12 +984,26 @@ li {
   background-color: var(--accent);
   transition: background-color 300ms linear;
 }
+@media screen and (max-width: 767px) {
+  .booking-form__button {
+    margin: 0 auto;
+  }
+}
 
 .contacts {
-  width: calc(50% - 15px);
+  margin: 0 auto;
+  padding: 84px 30px;
+}
+.contacts--bg {
   background: url(../images/contacts-bg.png);
   background-size: cover;
-  padding: 140px 100px 193px 100px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts--bg {
+    box-sizing: border-box;
+    width: 625px;
+    padding: 130px 100px;
+  }
 }
 .contacts__title--dark {
   font-size: 42px;
@@ -948,42 +1018,37 @@ li {
   color: var(--text-main-light);
 }
 .contacts__title--position {
+  display: flex;
+  justify-content: center;
   margin-bottom: 40px;
 }
-.contacts__pre-title--dark {
-  font-size: px;
-  font-weight: 600;
-  line-height: 1.36;
-  letter-spacing: 10;
-  color: var(--text-main-dark);
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  color: var(--text-secondary-light);
-}
-.contacts__pre-title--dark::before {
-  content: "";
-  display: inline-block;
-  align-self: center;
-  width: 60px;
-  height: 1px;
-  margin-right: 20px;
-  background-color: var(--text-secondary-dark);
-}
-.contacts__pre-title--dark::before {
-  background-color: var(--text-secondary-light);
-}
-.contacts__pre-title {
-  margin-bottom: 20px;
-  color: var(--text-main-light);
-}
-.contacts__pre-title .contacts__pre-title::before {
-  background-color: var(--text-main-light);
+@media screen and (min-width: 768px) {
+  .contacts__title--position {
+    justify-content: start;
+  }
 }
 
-.contacts-list--position {
-  margin-bottom: 70px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-wrap {
+    display: flex;
+  }
 }
+
+.address {
+  margin-bottom: 44px;
+}
+@media screen and (max-width: 767px) {
+  .address {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .address {
+    width: 330px;
+  }
+}
+
 .contacts-list__item {
   font-size: 18px;
   font-weight: 400;
@@ -996,8 +1061,10 @@ li {
 }
 .contacts-list__link {
   color: var(--text-secondary-light);
-  display: flex;
-  align-items: center;
+}
+.contacts-list__link:hover .contacts-list__icon {
+  fill: var(--text-accent);
+  transition: fill 300ms linear;
 }
 .contacts-list__icon {
   fill: var(--text-secondary-light);
@@ -1005,7 +1072,51 @@ li {
   height: 20px;
   margin-right: 15px;
 }
-.contacts-link:hover .contacts-list__icon {
-  fill: var(--accent);
-  transition: fill 300ms linear;
+
+@media screen and (max-width: 767px) {
+  .timetable {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .timetable {
+    width: 330px;
+    margin-left: auto;
+  }
+}
+.timetable__after-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 2;
+  color: var(--text-secondary-dark);
+  font-family: Open Sans;
+  text-align: left;
+  margin-bottom: 20px;
+  color: var(--text-secondary-light);
+}
+.timetable__pre-title--dark {
+  margin-bottom: 20px;
+  font-size: px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 10;
+  color: var(--text-main-dark);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary-light);
+}
+.timetable__pre-title--dark::before {
+  content: "";
+  display: inline-block;
+  align-self: center;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: var(--text-secondary-dark);
+}
+.timetable__pre-title--dark::before {
+  background-color: var(--text-secondary-light);
 }/*# sourceMappingURL=main.css.map */

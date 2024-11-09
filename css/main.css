@@ -249,10 +249,10 @@ li {
   background-size: cover;
 }
 .hero-article__pre-title--dark {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;
@@ -273,9 +273,9 @@ li {
 }
 .hero-article__title--dark {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.16;
-  letter-spacing: 5;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   font-family: Raleway;
   text-align: left;
@@ -287,7 +287,7 @@ li {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: 2;
+  letter-spacing: normal;
   color: var(--text-secondary-dark);
   font-family: Open Sans;
   text-align: left;
@@ -314,10 +314,10 @@ li {
   margin-left: 64px;
 }
 .about-article__pre-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;
@@ -336,7 +336,7 @@ li {
   font-size: 42px;
   font-weight: 700;
   line-height: 1.16;
-  letter-spacing: 5;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   font-family: Raleway;
   text-align: left;
@@ -347,7 +347,7 @@ li {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: 2;
+  letter-spacing: normal;
   color: var(--text-secondary-dark);
   font-family: Open Sans;
   text-align: left;
@@ -366,7 +366,7 @@ li {
 .about-article__button {
   font-size: px;
   font-weight: 600;
-  letter-spacing: 9;
+  letter-spacing: 9%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,13 +395,13 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 130px 55px;
+  padding: 84px 30px;
 }
 .prices-container__pre-title--dark {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;
@@ -422,9 +422,9 @@ li {
 }
 .prices-container__title--dark {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.16;
-  letter-spacing: 5;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   font-family: Raleway;
   text-align: left;
@@ -434,38 +434,67 @@ li {
   margin-bottom: 40px;
 }
 
-.prices-lists {
-  display: flex;
+@media screen and (max-width: 1199px) {
+  .prices-lists {
+    background: linear-gradient(180deg, rgb(23, 26, 36), rgba(23, 26, 36, 0.2) 100%);
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .prices-lists {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prices-lists {
+    display: flex;
+    margin-bottom: 50px;
+  }
 }
 
-.prices-list__wrap {
-  width: 50%;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
+@media screen and (max-width: 1199px) {
+  .prices-list__wrap {
+    margin-bottom: 20px;
+  }
 }
-.prices-list__wrap--left {
-  background: linear-gradient(180deg, rgb(23, 26, 36), rgba(23, 26, 36, 0.2) 100%);
-}
-.prices-list__wrap--right {
-  background: linear-gradient(180deg, rgb(9, 11, 19), rgba(9, 11, 19, 0.2) 100%);
+@media screen and (min-width: 1200px) {
+  .prices-list__wrap {
+    width: 585px;
+  }
+  .prices-list__wrap--left {
+    background: linear-gradient(180deg, rgb(23, 26, 36), rgba(23, 26, 36, 0.2) 100%);
+  }
+  .prices-list__wrap--right {
+    background: linear-gradient(180deg, rgb(9, 11, 19), rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
-.prices-list {
-  padding: 30px 40px;
+@media screen and (min-width: 1200px) {
+  .prices-list {
+    padding: 30px 40px;
+  }
 }
 .prices-list__item {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 2;
+  line-height: 2.14;
+  letter-spacing: normal;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   color: var(--text-secondary-light);
   text-align: left;
 }
-.prices-list__item + .prices-list__item {
-  margin-top: 20px;
+@media screen and (max-width: 767px) {
+  .prices-list__item {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .prices-list__item + .prices-list__item {
+    margin-top: 20px;
+  }
 }
 .prices-list__item::before {
   content: "";
@@ -570,10 +599,10 @@ li {
   }
 }
 .reasons-article__pre-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;
@@ -592,7 +621,7 @@ li {
   font-size: 42px;
   font-weight: 700;
   line-height: 1.16;
-  letter-spacing: 5;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   font-family: Raleway;
   text-align: left;
@@ -603,7 +632,7 @@ li {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: 2;
+  letter-spacing: normal;
   color: var(--text-secondary-dark);
   font-family: Open Sans;
   text-align: left;
@@ -639,10 +668,10 @@ li {
   margin-right: auto;
 }
 .masters-titles__pre-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;
@@ -661,7 +690,7 @@ li {
   font-size: 42px;
   font-weight: 700;
   line-height: 1.16;
-  letter-spacing: 5;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   font-family: Raleway;
   text-align: left;
@@ -794,10 +823,10 @@ li {
 }
 
 .gallery-titles__pre-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;
@@ -911,9 +940,9 @@ li {
 }
 .booking__title--dark {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.16;
-  letter-spacing: 5;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   font-family: Raleway;
   text-align: left;
@@ -1003,7 +1032,7 @@ li {
 .booking-form__button {
   font-size: px;
   font-weight: 600;
-  letter-spacing: 9;
+  letter-spacing: 9%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1052,9 +1081,9 @@ li {
 }
 .contacts__title--dark {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.16;
-  letter-spacing: 5;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   font-family: Raleway;
   text-align: left;
@@ -1098,7 +1127,7 @@ li {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: 2;
+  letter-spacing: normal;
   color: var(--text-secondary-dark);
   font-family: Open Sans;
   text-align: left;
@@ -1134,7 +1163,7 @@ li {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: 2;
+  letter-spacing: normal;
   color: var(--text-secondary-dark);
   font-family: Open Sans;
   text-align: left;
@@ -1143,10 +1172,10 @@ li {
 }
 .timetable__pre-title--dark {
   margin-bottom: 20px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
-  letter-spacing: 10;
+  letter-spacing: normal;
   color: var(--text-main-dark);
   text-transform: uppercase;
   display: flex;

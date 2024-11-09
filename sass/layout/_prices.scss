@@ -9,10 +9,10 @@
   flex-direction: column;
   justify-content: center;
 
-  padding: 130px 55px;
+  padding: 84px 30px;
 
   &__pre-title--dark {
-    @include mixins.pre-title--dark;
+    @include mixins.pre-title--dark(11, 600, 1.36, );
   }
 
   &__title--dark {
@@ -22,36 +22,61 @@
 }
 
 .prices-lists {
-  display: flex;
+  @media screen and (max-width:1199px) {
+    background: linear-gradient(180.00deg, rgb(23, 26, 36),rgba(23, 26, 36, 0.2) 100%);
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width:480px) and (max-width:1199px) {
+    padding: 30px;
+  }
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    margin-bottom: 50px;
+  }
 }
 
 .prices-list__wrap {
-  width: 50%;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
+ 
 
-  &--left {
-    background: linear-gradient(
-      180deg,
-      rgb(23, 26, 36),
-      rgba(23, 26, 36, 0.2) 100%
-    );
-  }
 
-  &--right {
-    background: linear-gradient(
-      180deg,
-      rgb(9, 11, 19),
-      rgba(9, 11, 19, 0.2) 100%
-    );
+    @media screen and (max-width:1199px) {
+      margin-bottom: 20px;
+    }
+
+  @media screen and (min-width:1200px) {
+    width: 585px;
+    // width: 50%;
+   
+    // flex-wrap: wrap;
+
+    &--left {
+      background: linear-gradient(
+        180deg,
+        rgb(23, 26, 36),
+        rgba(23, 26, 36, 0.2) 100%
+      );
+    }
+  
+    &--right {
+      background: linear-gradient(
+        180deg,
+        rgb(9, 11, 19),
+        rgba(9, 11, 19, 0.2) 100%
+      );
+    }
   }
 }
 
 .prices-list {
-  padding: 30px 40px;
+  @media screen and (min-width:1200px) {
+    padding: 30px 40px;
+  }
 
   &__item {
-    @include mixins.font(18, 400, 1.6, 2);
+    @include mixins.font(14, 400, 2.14,);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -59,8 +84,16 @@
     color: var(--text-secondary-light);
     text-align: left;
 
-    & + & {
-      margin-top: 20px;
+    @media screen and (max-width:767px) {
+      & {
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (min-width:768px) {
+      & + & {
+        margin-top: 20px;
+      }
     }
 
     &::before {

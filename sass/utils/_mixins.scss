@@ -1,4 +1,4 @@
-@mixin font($fs: 12, $fw: 400, $lh: 1.36, $ls:10%) {
+@mixin font($fs: 12, $fw: 400, $lh: 1.36, $ls:normal) {
   font-size: $fs + px;
   font-weight: $fw;
   line-height: $lh;
@@ -7,8 +7,8 @@
 
 /* ------------- mixins pre after title -------------- */
 
-@mixin pre-title {
-  @include font(12, 600, 1.36, 10);
+@mixin pre-title($fs: 11, $fw: 600, $lh: 1.36, $ls:normal) {
+  @include font($fs, $fw, $lh, $ls);
 
   color: var(--text-main-dark);
   text-transform: uppercase;
@@ -29,8 +29,8 @@
   }
 }
 
-@mixin pre-title--dark {
-  @include pre-title;
+@mixin pre-title--dark($fs: 11, $fw: 600, $lh: 1.36, $ls:normal) {
+  @include pre-title($fs, $fw, $lh, $ls);
 
   color: var(--text-secondary-light);
 
@@ -39,8 +39,8 @@
   }
 }
 
-@mixin title {
-  @include font(42, 700, 1.16, 5);
+@mixin title($fs: 42, $fw: 700, $lh: 1.16, $ls:normal) {
+  @include font($fs, $fw, $lh, $ls);
   color: var(--text-main-dark);
 
   font-family: Raleway;
@@ -50,13 +50,13 @@
   margin: 20px 0;
 }
 
-@mixin title--dark {
-  @include title;
+@mixin title--dark($fs: 42, $fw: 600, $lh: 1.16, $ls:normal) {
+  @include title($fs, $fw, $lh, $ls);
   color: var(--text-main-light);
 }
 
-@mixin after-title {
-  @include font(18, 400, 1.6, 2);
+@mixin after-title($fs: 18, $fw: 400, $lh: 1.6, $ls:normal) {
+  @include font($fs, $fw, $lh, $ls);
   color: var(--text-secondary-dark);
   font-family: Open Sans;
   text-align: left;
@@ -64,15 +64,15 @@
   margin-bottom: 20px;
 }
 
-@mixin after-title--dark {
-  @include after-title;
+@mixin after-title--dark($fs: 18, $fw: 400, $lh: 1.6, $ls:normal) {
+  @include after-title($fs, $fw, $lh, $ls);
   color: var(--text-secondary-light);
 }
 
 // ------------------button------------------
 
 @mixin button {
-  @include font(null, 600, null, 9);
+  @include font(null, 600, null, 9%);
 
   display: flex;
   justify-content: center;

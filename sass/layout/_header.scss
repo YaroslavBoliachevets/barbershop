@@ -5,21 +5,32 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
 
   text-align: left;
+  padding: 40px 30px 40px 30px;
 }
 
 .header__container {
   display: flex;
 
-  &--position {
-    margin-top: 32px;
-  }
+  // &--position {
+  //   margin-top: 32px;
+  // }
+}
+
+.header__logo-svg {
+  width: 55px;
+  height: 55px;
+  fill: var(--secondary-light);
 }
 
 .navigation {
+  display: none;
   align-content: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 
   &--position {
     margin-left: 70px;
@@ -43,18 +54,20 @@
 }
 
 .header-contact {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-left: 48px;
+  }
 
   &__link-tel {
     align-self: center;
     margin-right: 40px;
+    margin-top: 20px;
 
     color: var(--text-main-light);
-  }
-
-  &-container {
-	margin-right: 20px;
   }
 }

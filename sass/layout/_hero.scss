@@ -8,6 +8,7 @@
 .sidebar {
   width: 93px;
   margin-top: 50%;
+  display: none;
 }
 
 .sidebar-list {
@@ -43,20 +44,32 @@
 .hero-article {
   flex-grow: 1;
   background-color: grey;
-  padding: 272px 0 296px 96px;
+  padding: 208px 0 183px 20px;
+
+  &--wrap {
+    @media screen and (min-width:480px) {
+      width: 306px;
+      padding-left: 31px;
+    }
+  }
+
+  
+  // padding: 272px 0 296px 96px;
 
   background-image: url(../images/hero.jpeg);
+  background-position: center;
   background-size: cover;
 
   &__pre-title--dark {
-    @include mixins.pre-title--dark;
+    @include mixins.pre-title--dark(11, 600, 1.36);
   }
 
   &__title--dark {
-    @include mixins.title--dark;
+    @include mixins.title--dark(48, 700, 1.16);
   }
 
   &__after-title--dark {
-    @include mixins.after-title--dark;
+    @include mixins.after-title--dark(16, 400, 1.6);
+	color: rgb(215, 220, 238);
   }
 }

@@ -1,14 +1,32 @@
-@use '../utils/mixins';
+@use '../utils/mixins' as *;
 
 .hero {
   display: flex;
-  justify-content: left;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 690px;
+    
+  }
+
+  @include desktop {
+    height: 100vh;
+  }
 }
 
 .sidebar {
   width: 93px;
-  margin-top: 50%;
+  margin-top: 100%;
   display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: block;
+    margin-top: 40%;
+  }
 }
 
 .sidebar-list {
@@ -19,7 +37,7 @@
   transform: rotate(-90deg) translate(0px);
 
   &--position {
-    margin-left: 20px;
+    margin-left: 35px;
   }
 
   &::before {
@@ -46,30 +64,32 @@
   background-color: grey;
   padding: 208px 0 183px 20px;
 
-  &--wrap {
-    @media screen and (min-width:480px) {
-      width: 306px;
-      padding-left: 31px;
-    }
+  @include desktop {
+    padding-left: 96px;
   }
 
-  
-  // padding: 272px 0 296px 96px;
+  &--wrap {
+    max-width: 336px;
+
+    @include desktop {
+      width: 444px;
+    }
+  }
 
   background-image: url(../images/hero.jpeg);
   background-position: center;
   background-size: cover;
 
   &__pre-title--dark {
-    @include mixins.pre-title--dark(11, 600, 1.36);
+    @include pre-title--dark(11, 600, 1.36);
   }
 
   &__title--dark {
-    @include mixins.title--dark(48, 700, 1.16);
+    @include title--dark(48, 700, 1.16);
   }
 
   &__after-title--dark {
-    @include mixins.after-title--dark(16, 400, 1.6);
-	color: rgb(215, 220, 238);
+    @include after-title--dark(16, 400, 1.6);
+    color: rgb(215, 220, 238);
   }
 }

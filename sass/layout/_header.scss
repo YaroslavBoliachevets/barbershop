@@ -1,39 +1,72 @@
-@use '../utils/mixins';
+@use '../utils/mixins' as *;
 .header {
-  @include mixins.font(12, 600, null, 10);
+  @include font(12, 600, null, 10);
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
+margin: 0 auto;
 
   text-align: left;
   padding: 40px 30px 40px 30px;
+
+  @include tablet {
+    padding-left: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  @include desktop {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 15px;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
 }
 
 .header__container {
   display: flex;
+  align-items: center;
 
-  // &--position {
-  //   margin-top: 32px;
-  // }
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .header__logo-svg {
-  width: 55px;
+  width: 68px;
   height: 55px;
   fill: var(--secondary-light);
+
+  @include tablet {
+    fill: var(--secondary-dark);
+  }
+
+  @include desktop {
+    fill: var(--secondary-dark);
+  }
 }
 
 .navigation {
   display: none;
   align-content: center;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
+    display: flex;
+    padding-top: 15px;
+  }
+
+  
+  @include desktop {
     display: flex;
   }
 
   &--position {
     margin-left: 70px;
+    @include tablet {
+      margin-left: 35px;
+    }
   }
 }
 
@@ -41,6 +74,10 @@
   display: flex;
   width: 386px;
   justify-content: space-between;
+
+  @include tablet {
+    width: 340px;
+  }
 
   color: var(--text-main-light);
 
@@ -56,18 +93,31 @@
 .header-contact {
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
-    align-items: center;
     flex-direction: column-reverse;
     margin-left: 48px;
+    padding-top: 5px;
   }
+
+@include desktop {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
 
   &__link-tel {
     align-self: center;
-    margin-right: 40px;
-    margin-top: 20px;
+    text-transform: capitalize;
 
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+    @include desktop {
+      margin-right: 40px;
+    }
     color: var(--text-main-light);
   }
 }

@@ -977,9 +977,6 @@ li {
   }
 }
 
-.connection-wrap {
-  border: 3px solid red;
-}
 @media screen and (min-width: 1200px) {
   .connection-wrap {
     display: flex;
@@ -1030,9 +1027,6 @@ li {
   margin-bottom: 40px;
 }
 
-.booking-wrap {
-  border: 3px solid red;
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .booking-wrap {
     display: flex;
@@ -1059,6 +1053,11 @@ li {
   border: 0px;
   border-bottom: 1px solid var(--text-secondary-light);
   transition: border-color 500ms;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .booking-form__input + .booking-form__input {
+    margin-left: 20px;
+  }
 }
 .booking-form__input-long {
   width: 270px;

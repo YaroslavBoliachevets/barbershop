@@ -27,8 +27,6 @@
 
 .booking-wrap {
 
-  border: 3px solid red;
-
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -55,6 +53,12 @@
     border: 0px;
     border-bottom: 1px solid var(--text-secondary-light);
     transition: border-color 500ms;
+
+    & + & {
+      @include tablet {
+        margin-left: 20px;
+      }
+    }
 
     &-long {
       width: 270px;

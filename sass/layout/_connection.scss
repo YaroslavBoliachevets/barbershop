@@ -9,21 +9,16 @@
   }
 }
 
-
 .connection-wrap {
-border: 3px solid red;
   @include desktop {
     display: flex;
     justify-content: center;
-
   }
 }
 
 .connection-wrap--bg {
- @include desktop {
+  @include desktop {
     width: calc(100% / 2 - 15px);
     padding: 140px 100px 193px 100px;
   }
 }
-
-

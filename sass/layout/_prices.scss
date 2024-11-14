@@ -1,4 +1,4 @@
-@use '../utils/mixins';
+@use '../utils/mixins' as *;
 
 .prices-container {
   background: rgb(17, 19, 25);
@@ -12,27 +12,30 @@
   padding: 84px 30px;
 
   &__pre-title--dark {
-    @include mixins.pre-title--dark(11, 600, 1.36, );
+    @include pre-title--dark(11, 600, 1.36, );
   }
 
   &__title--dark {
-    @include mixins.title--dark;
+    @include title--dark;
     margin-bottom: 40px;
   }
 }
 
 .prices-lists {
-  @media screen and (max-width:1199px) {
+  @include mobile {
     background: linear-gradient(180.00deg, rgb(23, 26, 36),rgba(23, 26, 36, 0.2) 100%);
     padding: 10px;
     margin-bottom: 30px;
   }
 
-  @media screen and (min-width:480px) and (max-width:1199px) {
+  @include tablet {
     padding: 30px;
+    background: linear-gradient(180.00deg, rgb(23, 26, 36),rgba(23, 26, 36, 0.2) 100%);
+    padding: 10px;
+    margin-bottom: 30px;
   }
 
-  @media screen and (min-width:1200px) {
+  @include desktop {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -43,11 +46,15 @@
  
 
 
-    @media screen and (max-width:1199px) {
+    @include mobile {
       margin-bottom: 20px;
     }
 
-  @media screen and (min-width:1200px) {
+    @include tablet{
+      margin-bottom: 20px;
+    }
+
+  @include desktop {
     width: 585px;
     // width: 50%;
    
@@ -72,12 +79,12 @@
 }
 
 .prices-list {
-  @media screen and (min-width:1200px) {
+  @include desktop {
     padding: 30px 40px;
   }
 
   &__item {
-    @include mixins.font(14, 400, 2.14,);
+    @include font(14, 400, 2.14,);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -85,13 +92,19 @@
     color: var(--text-secondary-light);
     text-align: left;
 
-    @media screen and (max-width:767px) {
+    @include mobile {
       & {
         margin-top: 20px;
       }
     }
 
-    @media screen and (min-width:768px) {
+    @include tablet {
+      & + & {
+        margin-top: 20px;
+      }
+    }
+
+    @include desktop {
       & + & {
         margin-top: 20px;
       }

@@ -1,4 +1,4 @@
-@use '../utils/mixins';
+@use '../utils/mixins' as *;
 
 .gallery {
   display: flex;
@@ -8,12 +8,12 @@
 .gallery-titles {
   &__pre-title {
    
-    @media screen and (max-width:767px) {
+    @include mobile {
       display: flex;
       justify-content: center;
     }
 
-    @include mixins.pre-title;
+    @include pre-title;
     margin-bottom: 40px;
   }
 }
@@ -23,20 +23,32 @@
   flex-wrap: wrap;
   margin-left: -30px;
 
-  @media screen and (max-width: 1199px) {
+  @include mobile {
+    flex-wrap: wrap;
+    margin-bottom: -30px;
+  }
+
+  @include tablet {
     flex-wrap: wrap;
     margin-bottom: -30px;
   }
 
   &__item {
 
-    @media screen and (max-width: 1199px) {
+    @include mobile {
       margin-left: 30px;
       margin-bottom: 30px;
     }
 
+    @include tablet {
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
 
-    @media screen and (min-width: 1200px) {
+    
+
+
+    @include desktop {
       & {
         margin-left: 30px;
       }
@@ -44,15 +56,15 @@
   }
 
   &__img {
-    @media screen and (max-width: 767px) {
+    @include mobile {
       max-width: 418px;
     }
   
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet {
       width: 330px;
     }
   
-    @media screen and (min-width: 1200px)  {
+    @include desktop  {
       width: 270px;
     }
   }

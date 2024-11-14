@@ -328,7 +328,7 @@ li {
 .about-list {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about-list {
     display: block;
     width: 330px;
@@ -348,7 +348,7 @@ li {
   width: 483px;
   padding: 0 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about-article {
     width: 330px;
   }
@@ -477,16 +477,19 @@ li {
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .prices-lists {
     background: linear-gradient(180deg, rgb(23, 26, 36), rgba(23, 26, 36, 0.2) 100%);
     padding: 10px;
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .prices-lists {
     padding: 30px;
+    background: linear-gradient(180deg, rgb(23, 26, 36), rgba(23, 26, 36, 0.2) 100%);
+    padding: 10px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -497,7 +500,12 @@ li {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .prices-list__wrap {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .prices-list__wrap {
     margin-bottom: 20px;
   }
@@ -535,7 +543,12 @@ li {
     margin-top: 20px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .prices-list__item + .prices-list__item {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .prices-list__item + .prices-list__item {
     margin-top: 20px;
   }
@@ -569,7 +582,12 @@ li {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .reasons-list--wrap {
+    justify-content: end;
+  }
+}
+@media screen and (min-width: 1200px) {
   .reasons-list--wrap {
     justify-content: end;
   }
@@ -629,7 +647,7 @@ li {
     padding: 0 10px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .reasons-article {
     max-width: 500px;
     margin: 0 auto;
@@ -700,7 +718,7 @@ li {
     padding-bottom: 84px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .masters-container {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -811,7 +829,12 @@ li {
     width: 450px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .masters-description__top-text {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .masters-description__top-text {
     display: none;
   }
@@ -899,13 +922,25 @@ li {
   flex-wrap: wrap;
   margin-left: -30px;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .gallery-list {
     flex-wrap: wrap;
     margin-bottom: -30px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .gallery-list {
+    flex-wrap: wrap;
+    margin-bottom: -30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .gallery-list__item {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .gallery-list__item {
     margin-left: 30px;
     margin-bottom: 30px;
@@ -942,11 +977,8 @@ li {
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1199px) {
-  .connection-wrap {
-    display: flex;
-    justify-content: center;
-  }
+.connection-wrap {
+  border: 3px solid red;
 }
 @media screen and (min-width: 1200px) {
   .connection-wrap {
@@ -997,18 +1029,16 @@ li {
 .booking__title--position {
   margin-bottom: 40px;
 }
-@media screen and (max-width: 767px) {
-  .booking__title--position {
-    display: flex;
-    justify-content: center;
-  }
-}
 
-@media screen and (min-width: 767px) {
+.booking-wrap {
+  border: 3px solid red;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .booking-wrap {
     display: flex;
     justify-content: space-between;
     margin-bottom: 23px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1033,7 +1063,7 @@ li {
 .booking-form__input-long {
   width: 270px;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1200px) {
   .booking-form__input + .booking-form__input {
     margin-left: 25px;
   }
@@ -1097,11 +1127,6 @@ li {
   background-color: var(--accent);
   transition: background-color 300ms linear;
 }
-@media screen and (max-width: 767px) {
-  .booking-form__button {
-    margin: 0 auto;
-  }
-}
 
 .contacts {
   margin: 0 auto;
@@ -1140,7 +1165,7 @@ li {
   justify-content: center;
   margin-bottom: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts__title--position {
     justify-content: start;
   }
@@ -1161,7 +1186,7 @@ li {
     justify-content: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .address {
     width: 330px;
   }

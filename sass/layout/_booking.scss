@@ -1,47 +1,45 @@
-@use '../utils/mixins';
+@use '../utils/mixins' as *;
 .booking {
-
   background-color: var(--secondary-dark);
 
-  @media screen and (max-width: 767px) {
+  @include mobile {
     padding: 84px 30px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-	max-width: 690px;
+  @include tablet {
+    max-width: 690px;
     padding: 100px 30px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding: 130px 40px 193px 0;
-	width: 560px;
+    width: 560px;
   }
 
   &__title--dark {
-    @include mixins.title--dark;
+    @include title--dark;
   }
 
   &__title--position {
     margin-bottom: 40px;
-
-    @media screen and (max-width: 767px) {
-      display: flex;
-      justify-content: center;
-    }
   }
 }
 
 .booking-wrap {
-  @media screen and (min-width: 767px) {
+
+  border: 3px solid red;
+
+  @include tablet {
     display: flex;
     justify-content: space-between;
     margin-bottom: 23px;
+    margin-bottom: 40px;
   }
 }
 
 .booking-form {
   &-text {
-    @include mixins.font(11, 600, null, 10);
+    @include font(11, 600, null, 10);
     color: var(--text-secondary-light);
     font-family: Open Sans;
     text-align: left;
@@ -63,7 +61,7 @@
     }
 
     & + & {
-      @media screen and (min-width: 767px) {
+      @include desktop {
         margin-left: 25px;
       }
     }
@@ -118,11 +116,10 @@
 }
 
 .booking-form__button {
-  @include mixins.button;
+  @include button;
   margin: 0;
 
-  @media screen and (max-width: 767px) {
-    margin: 0 auto;
-  }
+  // @media screen and (max-width: 767px) {
+  //   margin: 0 auto;
+  // }
 }
-

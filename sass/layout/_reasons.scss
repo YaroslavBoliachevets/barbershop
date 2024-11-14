@@ -1,7 +1,7 @@
-@use '../utils/mixins';
+@use '../utils/mixins' as *;
 
 .reasons-container {
-  @media screen and (min-width:1200px) {
+  @include desktop {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
@@ -13,7 +13,11 @@
     display: flex;
     justify-content: center;
 
-    @media screen and (min-width:768px) {
+    @include tablet {
+      justify-content: end;
+    }
+
+    @include desktop {
       justify-content: end;
     }
   }
@@ -24,7 +28,7 @@
 
   &__item {
     box-sizing: border-box;
-    @media screen and (max-width:480px) {
+    @include sm-mobile {
       max-width: 140px;
     }
     max-width: 194px;
@@ -45,7 +49,7 @@
   }
 
   &__counter {
-    @include mixins.font(42, 700, null, 5);
+    @include font(42, 700, null, 5);
 
     justify-content: center;
     color: var(--text-main-dark);
@@ -64,7 +68,7 @@
   }
 
   &__benefits {
-    @include mixins.font(11, 600, null, 0);
+    @include font(11, 600, null, 0);
     width: 122px;
     color: var(--text-main-dark);
     font-family: Open Sans;
@@ -74,32 +78,32 @@
 
 .reasons-article {
 
-  @media screen and (max-width:767px) {
+  @include mobile {
     max-width: 418px;
     margin: 0 auto;
     padding: 0 10px;
   }
 
-  @media screen and (max-width:1199px) {
+  @include tablet {
     max-width: 500px;
     margin: 0 auto;
     padding: 0 10px;
   }
 
-  @media screen and (min-width:1200px) {
+  @include desktop {
     max-width: 500px;
     margin-left: 130px;
   }
   &__pre-title {
-    @include mixins.pre-title;
+    @include pre-title;
   }
 
   &__title {
-    @include mixins.title;
+    @include title;
   }
 
   &__after-title {
-    @include mixins.after-title;
+    @include after-title;
     margin-bottom: 44px;
   }
 }

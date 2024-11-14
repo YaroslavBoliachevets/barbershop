@@ -1,4 +1,4 @@
-@use '../utils/mixins';
+@use '../utils/mixins' as *;
 
 .masters {
   background: rgb(247, 247, 247);
@@ -11,12 +11,12 @@
   padding-top: 130px;
   padding-bottom: 130px;
 
-  @media screen and (max-width: 767px) {
+  @include mobile {
     padding-top: 84px;
     padding-bottom: 84px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @include tablet {
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -28,22 +28,22 @@
   margin-right: auto;
 
   &__pre-title {
-    @include mixins.pre-title;
+    @include pre-title;
   }
 
   &__title {
-    @media screen and (max-width:767px) {
+    @include mobile {
       display: flex;
     justify-content: center;
     }
-    @include mixins.title;
+    @include title;
     margin-bottom: 40px;
   }
 }
 
 .masters-list {
   margin-bottom: -30px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     display: flex;
     margin-left: -30px;
     flex-wrap: wrap;
@@ -52,7 +52,7 @@
   &__item {
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       width: calc((100% / 3 - 30px));
       margin-left: 30px;
 
@@ -63,7 +63,7 @@
   }
 
   &__name {
-    @include mixins.font(18, 400, null, 2);
+    @include font(18, 400, null, 2);
     color: var(--text-main-dark);
     font-family: Open Sans;
     text-align: center;
@@ -73,7 +73,7 @@
   }
 
   &__position {
-    @include mixins.font(14, 400, null, 2);
+    @include font(14, 400, null, 2);
     color: rgb(255, 108, 0);
     font-family: Open Sans;
     text-align: center;
@@ -92,21 +92,24 @@
     background-size: cover;
     height: 346px;
 
-    @media screen and (max-width: 767px) {
+    @include mobile {
       max-width: 300px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet {
       width: 450px;
     }
   }
 
   &__top-text {
-    @media screen and (max-width:1199px) {
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
       display: none;
     }
     
-    @media screen and (min-width: 1200px)  {
+    @include desktop  {
       
 
       overflow: visible;

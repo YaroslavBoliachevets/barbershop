@@ -77,12 +77,28 @@
     <!-- -----------------about--------------------- -->
     <section id="about" class="about">
       <div class="about-container container">
-        <ul class="about-list">
-          <li clacarefullyss="about-list__item">
-            <img src="./images/about1-1x.jpeg1" alt="shaving" />
+        <ul class="about-img-list">
+          <li clacarefullyss="about-img-list__item">
+            <img class="about-img--dt"
+              srcset="
+                ./images/about1dt-1x.jpeg 1x,
+                ./images/about1dt-2x.jpeg 2x
+              "
+              alt="shaving"
+            />
+
+            <img class="about-img--tb" srcset="./images/about1tb-1x.jpeg 1x, ./images/about1tb-2x.jpeg 2x" alt="shaving"/>
           </li>
-          <li class="about-list__item">
-            <img src="./images/about2-1x.jpeg1" alt="cutting" />
+
+          <li class="about-img-list__item">
+            <img class="about-img--dt"
+              srcset="
+                ./images/about2dt-1x.jpeg 1x,
+                ./images/about2dt-2x.jpeg 2x
+              "
+              alt="shaving"
+            />
+            <img class="about-img--tb" srcset="./images/about2tb-1x.jpeg 1x, ./images/about2tb-2x.jpeg 2x" alt="shaving"/>
           </li>
         </ul>
 

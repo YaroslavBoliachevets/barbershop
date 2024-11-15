@@ -1,6 +1,7 @@
 @use '../utils/mixins' as *;
 .booking {
   background-color: var(--secondary-dark);
+  margin: 0 auto;
 
   @include mobile {
     padding: 84px 30px;
@@ -64,11 +65,6 @@
       width: 270px;
     }
 
-    & + & {
-      @include desktop {
-        margin-left: 25px;
-      }
-    }
 
     &:hover,
     &:focus {

@@ -1,73 +1,90 @@
 @use '../utils/mixins' as *;
 
 .about-container {
-	display: flex;
-	justify-content: center;
-  }
-  
-  .about-list {
+  display: flex;
+  justify-content: center;
+}
 
+.about-img-list {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 330px;
+    height: 235px;
+
+	&__item {
+		margin-top: 20px;
+	}
+  }
+
+  @include desktop {
+    display: flex;
+
+    &__item {
+      &:nth-child(2) {
+        margin-left: 30px;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.about-img {
+  &--tb {
 	display: none;
+    @include tablet {
+      display: block;
+    }
 
-	@include tablet {
-		display: block;
-		width: 330px;
-		height: 235px;
+	& + & {
+		margin-top: 20px;
 	}
-
-	@include desktop {
-		display: flex;
-
-		&__item {
-			&:nth-child(2) {
-				margin-left: 30px;
-			  }
-		  }
-	}
-	
   }
-  
-  .about-article {
-	width: 483px;
-	padding: 0 20px;
 
-	@include tablet {
-		width: 330px;
-
-		&--position {
-			margin-left: 30px;
-		}
-	}
-
-
-
-
-	&__pre-title {
-		@include pre-title;
-	}
-
-	&__title {
-		@include title(28, 700, 1.16);
-	}
-
-	&__after-title {
-		@include after-title(16, 400, 1.6);
-	}
-
-	&__description {
-		@include font(14, 400, 1.85, 2);
-		
-		color: var(--text-secondary-dark);
-		font-family: Open Sans;
-		text-align: left;
-	  
-		margin-bottom: 40px;
-	  }
-
-	  &__button {
-		@include button--dark;
-	  }
+  &--dt {
+	display: none;
+    @include desktop {
+      display: block;
+    }
   }
-  
-  
-  
+}
+
+.about-article {
+  width: 483px;
+  padding: 0 20px;
+
+  @include tablet {
+    width: 330px;
+
+    &--position {
+      margin-left: 30px;
+    }
+  }
+
+  &__pre-title {
+    @include pre-title;
+  }
+
+  &__title {
+    @include title(28, 700, 1.16);
+  }
+
+  &__after-title {
+    @include after-title(16, 400, 1.6);
+  }
+
+  &__description {
+    @include font(14, 400, 1.85, 2);
+
+    color: var(--text-secondary-dark);
+    font-family: Open Sans;
+    text-align: left;
+
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    @include button--dark;
+  }
+}
